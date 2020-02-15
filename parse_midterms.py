@@ -4,7 +4,7 @@ import sys
 import ssl
 
 ssl._create_default_https_context = ssl._create_unverified_context
-# avoid ssl verification error 
+# avoid ssl verification error
 
 # USAGE: python3 parse_midterms.py WORDDUMP OUTPUT ACCURACY [104a or 112]
 # Accuracy matches what percentage match of past test questions
@@ -27,7 +27,7 @@ for i in range(len(wordlist)):
 BASE_DIR = ""
 TESTS = []
 if sys.argv[4] == "112":
-    BASE_DIR = "https://www2.ucsc.edu/courses/cmps112-wm/:/Old-Exams/"
+    BASE_DIR = "https://www2.ucsc.edu/courses/cse112-wm/:/Old-Exams/"
     TESTS = ["cmps112-2017q2-midterm.tt",
              "cmps112-2017q4-midterm.tt",
              "cmps112-2018q1-midterm.tt",
