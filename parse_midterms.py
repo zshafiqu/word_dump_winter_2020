@@ -28,11 +28,11 @@ BASE_DIR = ""
 TESTS = []
 if sys.argv[4] == "112":
     BASE_DIR = "https://www2.ucsc.edu/courses/cse112-wm/:/Old-Exams/"
-    TESTS = ["cmps112-2017q2-midterm.tt",
-             "cmps112-2017q4-midterm.tt",
+    TESTS = ["cmps112-2017q4-midterm.tt",
              "cmps112-2018q1-midterm.tt",
              "cmps112-2018q2-midterm.tt",
-             "cmps112-2018q4-midterm.tt ",
+             "cmps112-2018q4-midterm.tt",
+             "cmps112-2019q1-midterm.tt",
             ]
 elif sys.argv[4] == "104a":
     BASE_DIR = "https://www2.ucsc.edu/courses/cmps104a-wm/:/Old-Exams/"
