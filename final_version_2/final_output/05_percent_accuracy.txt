@@ -1,0 +1,4015 @@
+Matching questions with at least 0.05 in common.
+
+Question 1 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.7142857142857143: 
+   Ocaml.
+
+    (a) Define sum without using any higher-order functions.  [2pt]
+
+        sum : int list -> int = <fun>
+        # sum [1;2;3;4;5];;
+        - : int = 15
+
+    (b) Define fold_left.  [2pt]
+
+        val fold_left : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a =
+        <fun>
+
+    (c) Define sumf which uses a \beta-reduced form of calling fold_
+        left.  [1pt]
+
+        let sumf = fold_left
+        ________________________________________;;
+        val sumf : int list -> int = <fun>
+
+
+
+Question 2 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.4: 
+   Scheme.  Write a function to reverse a list.  [3pt]
+   > (reverse '(1 2 3 4 5))
+   (5 4 3 2 1)
+   > (reverse '())
+   ()
+
+
+
+Question 3 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.29411764705882354: 
+   Scheme.  Define map.  [2pt]
+   > (map (lambda (x) (+ 5 x)) '(1 2 3 4))
+   (6 7 8 9)
+   > (map (lambda (x) (cons 5 x)) '(1 2 3 4))
+   ((5 . 1) (5 . 2) (5 . 3) (5 . 4))
+
+
+
+Question 4 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.5416666666666666: 
+   Ocaml.  Given the definition of fac, fill in the type signatures of
+   each of the entries in the table.  [2pt]
+
+                                        +------+------------------------------+
+   let fac n =                          | fac  |                              |
+       let rec fac' n' a' =             +------+------------------------------+
+           if n' <= 1                   | n    |                              |
+           then a'                      +------+------------------------------+
+           else fac' (n' - 1) (n' * a') | fac' |                              |
+       in fac' n 1                      +------+------------------------------+
+   ;;                                   | n'   |                              |
+                                        +------+------------------------------+
+                                        | a'   |                              |
+                                        +------+------------------------------+
+                                        | <=   |                              |
+                                        +------+------------------------------+
+                                        | 1    |                              |
+                                        +------+------------------------------+
+                                        | -    |                              |
+                                        +------+------------------------------+
+                                        | *    |                              |
+                                        +------+------------------------------+
+
+
+
+Question 5 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.5: 
+   Scheme.  Using the same definitions as for Ocaml on the previous
+   page:
+
+    (a) Define sum without using any higher-order functions.  [2pt]
+
+    (b) Define fold_left.  [2pt]
+
+    (c) Define sumf which uses fold_left.  [1pt]
+
+
+
+Question 6 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.6888888888888889: 
+   Ocaml.
+
+    (a) Without using a higher-order function, define evenlen which
+        returns true of the length of the list is even and false oth-
+        erwise [2pt]
+
+        val evenlen : 'a list -> bool = <fun>
+
+    (b) Define evenlen which uses fold_left with the same result.  Use
+        a \beta-reduced version.  [1pt]
+
+        let evenlen = List.fold_left
+        ________________________________________;;
+        val evenlen : '_a list -> bool = <fun>
+
+
+
+Question 7 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.5217391304347826: 
+   Name the two general types of polymorphism, and for each of them,
+   name the specific kinds that represents each of them.  [2pt]
+
+   +-------------------------------+-------------------------------+
+   |           general             |           specific            |
+   +-------------------------------+-------------------------------+
+   |                               |                               |
+   |                               +-------------------------------+
+   |                               |                               |
+   +-------------------------------+-------------------------------+
+   |                               +-------------------------------+
+   |                               |                               |
+   +-------------------------------+-------------------------------+
+
+
+
+Question 8 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.75: 
+   Ocaml.  Write a function to reverse a list.  [2pt]
+
+
+
+Question 9 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.5666666666666667: 
+   Java.  Write a function to reverse a list.  Do not allocate or free
+   any nodes.  Do not use auxiliary functions.  [2pt]
+                |
+   class node { | node reverse (node head) {
+     int value; |
+     node link; |
+   }            |
+                |
+                |
+                |
+                |
+                |
+                | }
+
+
+
+Question 10 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.4954954954954955: 
+    Ocaml.  The Collatz conjectures states that for any positive inte-
+   ger $n$, if it is repeatedly replaced by $ n / 2 $ when even and $
+   3 n + 1 $ when odd, it eventually converges on the integer $1$.
+   Write a function that uses a tail-recursive inner function to re-
+   turn a list of all integers starting from the argument and ending
+   with 1.  The inner function produces the list in the reverse order,
+   then the outer function reverses the list.  Use List.rev from the
+   library to reverse the list.  [4pt]
+   # collatz 4;;
+   - : int list = [4; 2; 1]
+   # collatz 10;;
+   - : int list = [10; 5; 16; 8; 4; 2; 1]
+   # collatz 20;;
+   - : int list = [20; 10; 5; 16; 8; 4; 2; 1]
+   # collatz 16;;
+   - : int list = [16; 8; 4; 2; 1]
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.47058823529411764: 
+    Mathematical system defined by Alonzo Church which was later used
+    by John McCarthy in the design of Lisp.
+    (A) \alpha-calculus
+    (B) \beta-calculus
+    (C) \lambda-calculus
+    (D) \eta-calculus
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.35294117647058826: 
+    The type system in Scheme is:
+    (A) strong and dynamic
+    (B) strong and static
+    (C) weak and dynamic
+    (D) weak and static
+
+
+
+Question 3 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.35294117647058826: 
+    The type system in Ocaml is:
+    (A) strong and dynamic
+    (B) strong and static
+    (C) weak and dynamic
+    (D) weak and static
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.42857142857142855: 
+    Backus-Naur form (BNF) was first used in the specification of
+    which language?
+    (A) ALGOL 60
+    (B) BASIC
+    (C) COBOL
+    (D) FORTRAN
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.46875: 
+    What is the running time of:
+    let rec fib n =
+        if n < 2 then n
+        else fib (n - 1) + fib (n - 2);;
+    (A) $ O ( n ) $
+    (B) $ O ( log sub 2 n ) $
+    (C) $ O ( n sup 2 ) $
+    (D) $ O ( 2 sup n ) $
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.4090909090909091: 
+    How much stack space is used by fib?
+    (A) $ O ( n ) $
+    (B) $ O ( log sub 2 n ) $
+    (C) $ O ( n sup 2 ) $
+    (D) $ O ( 2 sup n ) $
+
+
+
+Question 7 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.1: 
+    What is 10?
+    (A) (apply + '(1 2 3 4))
+    (B) (cons + '(1 2 3 4))
+    (C) (filter + '(1 2 3 4))
+    (D) (foldl + '(1 2 3 4))
+
+
+
+Question 9 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.46511627906976744: 
+    Assuming only pure Java code with no sneaky tricks written in C,
+    If M = memory leaks, D = dangling references, and U = unsafe type
+    conversions or casting, which of the following are possible in
+    Java?
+    (A) all of them.
+    (B) none of them.
+    (C) only D, but neither M nor U.
+    (D) only M, but neither D nor U.
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.9285714285714286: 
+    Type of (+)?
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.1: 
+    What is (3 4)?
+    (A) (caar '(1 2 3 4))
+    (B) (cadr '(1 2 3 4))
+    (C) (cdar '(1 2 3 4))
+    (D) (cddr '(1 2 3 4))
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.7272727272727273: 
+    In the expression $ ( \lambda x . ( + x ) y ) $
+    (A) $x$ is bound and $y$ is bound.
+    (B) $x$ is bound and $y$ is free.
+    (C) $x$ is free and $y$ is bound.
+    (D) $x$ is free and $y$ is free.
+
++---------------------------------+
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|jpgs/math-but-yesterday-you-said.ps
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
++---------------------------------+
+
+
+
+
+Question 1 on Free Response on cmps112-2018q1-midterm.tt with accuracy 0.5483870967741935: 
+   Without using any higher-order functions, code the function re-
+   verse, which will reverse a list.
+
+   (a) Scheme.  [2pt]
+      > (reverse '(1 2 3 4))
+      (4 3 2 1)
+
+   (b) Ocaml.  [2pt]
+      # reverse [1;2;3;4];;
+      - : int list = [4; 3; 2; 1]
+
+
+
+Question 2 on Free Response on cmps112-2018q1-midterm.tt with accuracy 0.6923076923076923: 
+   Ocaml.  What is the output from each of the following?  [2pt]
+
+   +-----------------------------+----------------------------------------+
+   |reverse;;                    |                                        |
+   +-----------------------------+----------------------------------------+
+   |(*);;                        |                                        |
+   +-----------------------------+----------------------------------------+
+   |1::2::3::[];;                |                                        |
+   +-----------------------------+----------------------------------------+
+   |let car = function x::_ -> x |                                        |
+   |     | _ -> failwith "car";; |                                        |
+   +-----------------------------+----------------------------------------+
+
+
+
+Question 3 on Free Response on cmps112-2018q1-midterm.tt with accuracy 0.6829268292682927: 
+   Without using any higher-order functions, code the function fold_
+   left, which will take a function, a unit, and a list, and fold the
+   list.
+
+   (a) Scheme.  [2pt]
+      > (fold_left + 0 '(1 2 3))
+      6
+
+   (b) Ocaml.  [2pt]
+      # fold_left;;
+      - : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a = <fun>
+      # fold_left (+) 0 [1;2;3];;
+      - : int = 6
+
+
+
+Question 4 on Free Response on cmps112-2018q1-midterm.tt with accuracy 0.6436781609195402: 
+   Without using any higher-order functions, code the function find,
+   which will return a value associated with a given key.  Indicate
+   not found as shown here.  Use the sample interactions to figure out
+   the structure and arguments to this function.
+
+   (a) Ocaml.  [3pt]
+      # find;;
+      - : ('a -> 'b -> bool) -> 'a -> ('b * 'c) list -> 'c option =
+      <fun>
+      # find (=) 3 [(1,2);(3,4);(5,6)];;
+      - : int option = Some 4
+      # find (=) 3 [(5,6);(7,8)];;
+      - : int option = None
+
+   (b) Scheme.  Use cond and not if.  Return #f if not found.  [3pt]
+      > (find = 3 '((1 2) (3 4) (5 6)))
+      4
+      > (find = 3 '((5 6) (7 8)))
+      #f
+
+
+
+Question 5 on Free Response on cmps112-2018q1-midterm.tt with accuracy 0.7959183673469388: 
+   Ocaml.  Define merge which takes a comparison function and two
+   sorted lists and merges the two lists into a single sorted list.
+   [3pt]
+   # merge;;
+   - : ('a -> 'a -> bool) -> 'a list -> 'a list -> 'a list = <fun>
+   # merge (>) [9;5;1] [4;8;2];;
+   - : int list = [9; 5; 4; 8; 2; 1]
+   # merge (<) [1;5;9] [2;4;7];;
+   - : int list = [1; 2; 4; 5; 7; 9]
+   # merge (<) [] [];;
+   - : 'a list = []
+
+
+
+Question 6 on Free Response on cmps112-2018q1-midterm.tt with accuracy 0.5925925925925926: 
+   Ocaml.  Write a function trim which trims leading zeros from a
+   list.  [1pt]
+   # trim;;
+   - : int list -> int list = <fun>
+   # trim [1;2;3];;
+   - : int list = [1; 2; 3]
+   # trim [0;0;5];;
+   - : int list = [5]
+   # trim [0;0;0];;
+   - : int list = []
+
+
+
+Question 7 on Free Response on cmps112-2018q1-midterm.tt with accuracy 0.7407407407407407: 
+   Ocaml.  Define sub' according to the programming project.  It takes
+   two int lists representing multiprecise numbers and subtracts the
+   second from the first.  Assume the first number is not less than
+   the second number.  [5pt]
+   # sub';;
+   - : int list -> int list -> int list = <fun>
+   # sub' [1;2;3;4] [4;3;2;1];;
+   - : int list = [7; 8; 0; 3]
+   # sub' [0;0;0;9] [2];;
+   - : int list = [8; 9; 9; 8]
+   # sub' [3;3;3] [3;3;3];;
+   - : int list = []
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2018q1-midterm.tt with accuracy 0.14285714285714285: 
+   ((lambda (x) (* x x)) (+ 2 3))
+    (A) (+ 2 3)
+    (B) 12
+    (C) 25
+    (D) arity mismatch
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2018q1-midterm.tt with accuracy 0.2972972972972973: 
+   In a garbage collected language like Java, which does not have a
+    free function, which is possible?
+    (A) dangling pointers but not memory leak
+    (B) memory leak and dangling pointers
+    (C) memory leak but not dangling pointers
+    (D) neither memory leak nor dangling pointers
+
+
+
+Question 3 on Multiple Choice part 1 on cmps112-2018q1-midterm.tt with accuracy 0.5: 
+   In C++ and Java, what kind of statement allows an immediate
+    transfer of control from the current function up several levels,
+    unwinding the function call stack?
+    (A) break
+    (B) goto
+    (C) return
+    (D) throw
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2018q1-midterm.tt with accuracy 0.35714285714285715: 
+   Smalltalk's type system is:
+    (A) strong and dynamic
+    (B) strong and static
+    (C) weak and dynamic
+    (D) weak and static
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2018q1-midterm.tt with accuracy 0.3076923076923077: 
+   A partially parameterized function, such as (+) in Ocaml, is said
+    to be:
+    (A) curried
+    (B) raised
+    (C) thunked
+    (D) tupled
+
+
+
+
+Question 1 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.5555555555555556: 
+    In an eager functional language, which function can not be written
+    in a tail-recursive manner without reversing a list?
+    (A) fibonacci
+    (B) fold_left
+    (C) fold_right
+    (D) length
+
+
+
+Question 2 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.5: 
+    What will print:
+    5
+    (A) ((lambda (a b) (+ a b)) '(2 3))
+    (B) ((lambda (a b) (+ a b)) 2 3)
+    (C) (lambda (a b) (+ a b)) (2 3)
+    (D) (lambda (a b) (+ a b)) 2 3
+
+
+
+Question 3 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.9230769230769231: 
+    Output of:
+    # (-);;
+    (A) - : int * int * int = <fun>
+    (B) - : int * int -> int = <fun>
+    (C) - : int -> int * int = <fun>
+    (D) - : int -> int -> int = <fun>
+
+
+
+Question 4 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.4166666666666667: 
+    Which language has a strong dynamic type system?
+    (A) C and C++
+    (B) Java
+    (C) Ocaml
+    (D) Scheme
+
+
+
+Question 5 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.09090909090909091: 
+    What will print:
+    (1 2 7)
+    (A) '(1 2 ,(+ 3 4))
+    (B) ,(1 2 `(+ 3 4))
+    (C) `(1 2 '(+ 3 4))
+    (D) `(1 2 ,(+ 3 4))
+
+
+
+Question 6 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.4838709677419355: 
+    What is the running time of:
+    let rec fib n =
+        if n <= 1
+            then n
+            else fib (n - 1) + fib (n - 2);;
+    (A) $ O ( n ) $
+    (B) $ O ( n log n ) $
+    (C) $ O ( n sup 2 ) $
+    (D) $ O ( 2 sup n ) $
+
+
+
+Question 7 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.7: 
+    What are the first two characters in a Unix script file?
+    (A) #!
+    (B) %!
+    (C) /*
+    (D) $<
+
+
+
+Question 8 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.3333333333333333: 
+    What will print:
+    - : float = 5.
+    (A) (+ 2. 3.);;
+    (B) (+) 2. 3.;;
+    (C) 2. + 3.;;
+    (D) 2. +. 3.;;
+
+
+
+Question 9 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.7: 
+    What are the operator precedences is Smalltalk, with the highest
+    at the left and lowest at the right?
+    (A) binary, keyword, unary
+    (B) keyword, binary, unary
+    (C) keyword, unary, binary
+    (D) unary, binary, keyword
+
+
+
+Question 10 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.4: 
+    Of these languages, which one is the oldest?
+    (A) Algol 60
+    (B) C++
+    (C) Fortran
+    (D) Java
+
+
+
+Question 11 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.8333333333333334: 
+    What produces x itself as a result of this expression, assuming x
+    is a list of at least one element?
+    (A) (cons (car x) (cdr x))
+    (B) (cons (cdr x) (car x))
+    (C) (list (car x) (cdr x))
+    (D) (list (cdr x) (car x))
+
+
+
+Question 12 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.35714285714285715: 
+    Ocaml's type system is:
+    (A) strong and dynamic
+    (B) strong and static
+    (C) weak and dynamic
+    (D) weak and static
+
+
+
+
+Question 1 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.26666666666666666: 
+   Fill in the table with one of the following names:  John Backus,
+   Alonzo Church, Edsger Dijkstra, James Gosling, Grace Hopper, John
+   McCarthy, Dennis Ritchie, Bjarne Stroustrup, Alan Turing.  [1pt]
+
+   +---------------+----------------+----------------+---------------+
+   |C++            | Cobol          | Fortran        |Lisp           |
+   |               |                |                |               |
+   +---------------+----------------+----------------+---------------+
+
+
+Question 2 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.46875: 
+   Define the function reverse.  Do not use higher-order functions.
+
+    (a) Scheme.  [2pt]
+        > (reverse '(1 2 3 4))
+        (4 3 2 1)
+        > (reverse '("foo" "bar" "baz"))
+        ("baz" "bar" "foo")
+
+    (b) Ocaml.  [2pt]
+        # reverse [1; 2; 3; 4];;
+        - : int list = [4; 3; 2; 1]
+        # reverse ["foo"; "bar"; "baz"];;
+        - : string list = ["baz"; "bar"; "foo"]
+
+
+
+Question 3 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.3963963963963964: 
+   Scheme.  Using a canonical representation for a multiprecise number
+   as was specified in the Ocaml project, code the function add which
+   returns the sum of two lists.  The function add takes two lists as
+   arguments and defines in inner function addc as the worker func-
+   tion.  Be sure to use proper indentation in your answer.  [5pt]
+
+   > (add '(1 2 3) '(4 5 ))    (define (add num1 num2)
+   (5 7 3)                         (define (addc num1 num2 carry)
+   > (add '(9 9 9) '(9 9 9))
+   (8 9 9 1)
+   > (add '(9 9 9 9) '(3))
+   (2 0 0 0 1)
+   > (add '(1 2) '(1 2 3 4))
+   (2 4 3 4)
+   > (add '(0) '(1 2 3))
+   (1 2 3)
+
+                                   )
+                                   (addc num1 num2 0))
+
+
+
+Question 4 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.5: 
+   What is the output from each of the following expressions?  [2pt]
+
+   +------------------------------------+----------------------------------------+
+   |(apply + '(1 2 3))                  |                                        |
+   +------------------------------------+----------------------------------------+
+   |(map (lambda (x) (+ x 5)) '(1 2 3)) |                                        |
+   +------------------------------------+----------------------------------------+
+   |List.fold_left (-) 0 [1;2;3;4];;    |                                        |
+   +------------------------------------+----------------------------------------+
+   |List.map ((-)1) [1;2;3;4];;         |                                        |
+   +------------------------------------+----------------------------------------+
+
+
+
+Question 5 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.6304347826086957: 
+   \lambda-calculus.  Given the expression in the \lambda-calculus
+   shown at the top of each box, show the derivation order to the num-
+   ber 25 for each of normal order and applicative order evaluation.
+   [2pt]
+
+   +---------------------------------------------------------+----------------------------------------------------------+
+   |normal order evaluation                                  | applicative order evaluation                             |
+   +---------------------------------------------------------+----------------------------------------------------------+
+   |$ ( lambda x ~ . ~ ~ * ~ x ~ x ) ~ ~ ( + ~ 2 ~ 3 ) ~ ~ $ | $ ( lambda x ~ . ~ ~ * ~ x ~ x ) ~ ~ ( + ~ 2 ~ 3 ) ~ ~ $ |
+   |  $=$                                                    |   $=$                                                    |
+   |  $=$                                                    |   $=$                                                    |
+   |  $=$                                                    |   $=$                                                    |
+   |  $=$                                                    |   $=$                                                    |
+   |  $=$                                                    |   $=$                                                    |
+   |  $=$                                                    |   $=$                                                    |
+   |  $=$                                                    |   $=$                                                    |
+   |  $=$                                                    |   $=$                                                    |
+   |  $= ~ ~ 25$                                             |   $= ~ ~ 25$                                             |
+   +---------------------------------------------------------+----------------------------------------------------------+
+
+
+
+Question 6 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.5833333333333334: 
+   Name two kinds of universal polymorphism and give an example of
+   each.  [2pt]
+
+
+
+Question 7 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.5384615384615384: 
+   Name two kinds of ad hoc polymorphism and give an example of each.
+   [2pt]
+
+
+
+Question 8 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.5106382978723404: 
+   Ocaml.  Define max consistent with the examples shown here.  [2pt]
+   # max;;
+   - : ('a -> 'a -> bool) -> 'a list -> 'a option = <fun>
+   # max (>);;
+   - : '_a list -> '_a option = <fun>
+   # max (>) [];;
+   - : 'a option = None
+   # max (>) [3];;
+   - : int option = Some 3
+   # max (>) [3;1;4;1;5;9;2;6];;
+   - : int option = Some 9
+   # max (<) [3;1;4;1;5;9;2;6];;
+   - : int option = Some 1
+   # max (>) ["foo";"bar";"baz"];;
+   - : string option = Some "foo"
+   # max (<) [sqrt 2.;exp 1.];;
+   - : float option = Some 1.41421356237309515
+
+
+
+Question 9 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.7301587301587301: 
+   Define the function zipwith that takes a function and two lists and
+   uses that function to join the lists into a single result list.  If
+   the lists are of different length, use failwith to raise an excep-
+   tion.  Do not use the length function.  [2pt]
+   # zipwith;;
+   - : ('a -> 'b -> 'c) -> 'a list -> 'b list -> 'c list = <fun>
+   # zipwith (+) [1;2;3] [4;5;6];;
+   - : int list = [5; 7; 9]
+   # zipwith (/.) [1.;2.;3.] [4.;5.;6.];;
+   - : float list = [0.25; 0.4; 0.5]
+   # zipwith (+) [1;3;5] [4];;
+   Exception: Failure "zipwith".
+
+
+
+Question 10 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.6219512195121951: 
+    Without using any higher-order functions, code the function find,
+   which will return a value associated with a given key.  Use the
+   sample interactions to figure out the structure and arguments to
+   this function.
+
+   (a) Ocaml.  [2pt]
+      # find;;
+      - : ('a -> 'b -> bool) -> 'a -> ('b * 'c) list -> 'c option =
+      <fun>
+      # find (=) 3 [(1,2);(3,4);(5,6)];;
+      - : int option = Some 4
+      # find (=) 3 [(5,6);(7,8)];;
+      - : int option = None
+
+   (b) Scheme.  Use cond.  Do not use if.  Return #f if not found.
+      [2pt]
+      > (find = 3 '((1 2) (3 4) (5 6)))
+      4
+      > (find = 3 '((5 6) (7 8)))
+      #f
+
+
+
+Question 11 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.7608695652173914: 
+    Define the function sum which returns the sum of a list of inte-
+   gers.  Use a higher-order function.
+    (a) Scheme.  [1pt]
+        > foldl
+        #<procedure:foldl>
+        (define (sum list) ___________________________________ )
+        > (sum '(1 2 3))
+        6
+    (b) Ocaml.  [1pt]
+        # let sum = List.fold_left ___________________________________
+        ;;
+        # List.fold_left;;
+        - : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a = <fun>
+        val sum : int list -> int = <fun>
+        # sum [1;2;3];;
+        - : int = 6
+
+
+
+Question 12 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.5862068965517241: 
+    Define the function length.
+    (a) Scheme.  Use foldl.  [1pt]
+        > (define (length list) (___________________________________
+        ))
+        > (length '(1 3 5 7))
+        4
+    (b) Ocaml.  Use List.fold_left.  [1pt]
+        # let length = List.fold_left
+        ___________________________________ ;;
+        val length : '_a list -> int = <fun>
+        # length [1;2;3;4];;
+        - : int = 4
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.6037735849056604: 
+    With respect to Java, the term ``overloading'' refers to:
+    (A) Automatic type conversion when the argument does not match the
+        declared type of the parameter.
+    (B) Generic classes with type parameterization.
+    (C) Multiple functions with the same name and different
+        signatures, defined in the same class.
+    (D) Multiple functions with the same name and signature, defined
+        in a base class and also in its derived classes.
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.36363636363636365: 
+    Which language uses normal order evaluation of expressions?
+    (A) Fortran
+    (B) Haskell
+    (C) Ocaml
+    (D) Scheme
+
+
+
+Question 3 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.3: 
+    Which Ocaml expression will generate an error message?
+    (A) (sqrt 2.)
+    (B) sqrt (2)
+    (C) sqrt (2.)
+    (D) sqrt 2.
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.9444444444444444: 
+    What is the type of List.map((+)3)?
+    (A) (int -> int) -> int list -> int list
+    (B) int list -> (int -> int) list
+    (C) int list -> int list
+    (D) int list
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.5238095238095238: 
+    The PL/1 language allows a non-local goto directly from a function
+    to a label in a function deeper down in the function call stack,
+    thus returning past several levels of function calls.  In Java and
+    C++, something similar can be accomplished by what statement?
+    (A) break
+    (B) continue
+    (C) return
+    (D) throw
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.9090909090909091: 
+    What is the type of (>)?
+    (A) 'a * 'a -> bool
+    (B) 'a -> 'a -> bool
+    (C) bool -> 'a -> 'a
+    (D) int -> int -> bool
+
+
+
+Question 7 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.125: 
+    What is (cddr '((1 2 3) (4 5 6) (7 8 9)))?
+    (A) ((7 8 9))
+    (B) (2 3)
+    (C) (4 5 6)
+    (D) 1
+
+
+
+Question 8 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.125: 
+    What is (cdar '((1 2 3) (4 5 6) (7 8 9)))?
+    (A) ((7 8 9))
+    (B) (2 3)
+    (C) (4 5 6)
+    (D) 1
+
+
+
+Question 9 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.7391304347826086: 
+    In the \lambda-calculus expression $ ( lambda x . ~ + ~ x ~ y ) $:
+    (A) $x$ is bound and $y$ is bound.
+    (B) $x$ is bound and $y$ is free.
+    (C) $x$ is free and $y$ is bound.
+    (D) $x$ is free and $y$ is free.
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.8823529411764706: 
+    What is tye type of (-)?
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.9166666666666666: 
+    What is the type of List.map?
+    (A) ('a -> 'b) -> 'a list -> 'b list
+    (B) ('a * 'b) * 'a list * 'b list
+    (C) 'a list -> 'b list -> ('a -> 'b)
+    (D) ('a list -> 'b list) -> 'a -> 'b
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.6136363636363636: 
+    What is the type of reverse from the first page?
+    (A) 'a list -> 'a list
+    (B) 'a list -> 'b list
+    (C) int list -> int list
+    (D) string list -> string list
+
+                        +--------------------+
+                        |                    |
+                        |                    |
+                        |                    |
+                        |                    |
+                        |                    |
+                        |jpgs/antikythera-0140x125.ps
+                        |                    |
+                        |                    |
+                        |                    |
+                        |                    |
+                        |                    |
+                        +--------------------+
+
+The Antikythera mechanism, built circa 150-100 BCE, is the oldest
+known complex scientific calculator, and is sometimes called the first
+known analog computer, with operational instructions written in Greek.
+http://en.wikipedia.org/wiki/Antikythera_mechanism
+
+
+
+
+Question 1 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.75: 
+   Smalltalk.  Write a program that prints the numbers 1 through 1000
+   inclusive, one number per line.  [1pt]
+
+
+
+Question 2 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.6333333333333333: 
+   Define sum using fold left, not recursion.
+
+   (a) Ocaml.  See the next page for the type of fold left.  [1pt]
+
+   (b) Scheme.  The arguments to foldl are in the same order.  [1pt]
+
+
+
+Question 3 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.5: 
+   Define the Fibonacci function fib recursively so that it runs in $
+   O ( n ) $ time for argument $n$.
+   Mathematically:  $ F sub 0 = 0 $;  $ F sub 1 = 1 $;  $ F sub n = F
+   sub { n - 1 } + F sub { n - 2 } $.
+
+   (a) Ocaml.  [2pt]
+
+   (b) Scheme.  [2pt]
+
+
+
+Question 4 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.275: 
+   C.  Define Fibonacci using Binet's formula.  Temporary local values
+   are double.  [1pt]
+                                                                             |
+   $ F sub n = { phi sup n - psi sup n } over sqrt 5 $                       | long fib (long n) [
+   where $ phi = { 1 + sqrt 5 } over 2 $ and $ psi = { 1 - sqrt 5 } over 2 $ |
+                                                                             |
+                                                                             |
+
+
+
+Question 5 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.6341463414634146: 
+   Smalltalk.  Define a block sum2 which takes a single value: array
+   argument and returns its sum.  Use the to:do:  message to iterate
+   over the array and use at: to select individual array elements.
+   [2pt]
+   st> sum2.
+   a BlockClosure
+   st> sum2 value: #(10 20 30 40 50).
+   150
+   st> sum2 value: #().
+   0
+
+
+
+Question 6 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.5432098765432098: 
+   Java.  For the example of polymorphism in each of the boxes, de-
+   scribe it using one of the following words:  conversion, inclusion,
+   overloading, parametric.  Also, in each box write the more general
+   classification using one of the words:  ad hoc, universal.  Score:
+   1 point if both words in all four boxes are correct, 1/2 point if
+   both words in three of the boxes are correct, else 0.  [1pt]
+
+   +-------------------------------+--------------------------------+
+   |class bar extends foo {        | class stack<Item> {            |
+   |   ...                         |    ...                         |
+   |}                              | }                              |
+   +-------------------------------+--------------------------------+
+   |void f (int i) {               | int value = 6;                 |
+   |}                              |                                |
+   |void f (String s) {            | double sq = Math.sqrt (value); |
+   |}                              |                                |
+   +-------------------------------+--------------------------------+
+
+
+
+Question 7 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.5206611570247934: 
+   Without using a higher-order function, and being sure to use tail
+   recursion where required, define the function max which takes an
+   inequality operator and a list and returns its maximum value.  In
+   each case return a special value (see below) for an empty list and
+   use an inner worker function otherwise.  See examples.
+
+   (a) Scheme.  Return #f for an empty list.  [3pt]
+      > (max > '(3 1 4 1 5 9 2 6 5 3 5))
+      9
+      > (max < '(3 1 4 1 5 9 2 6 5 3 5))
+      1
+      > (max string>? '("foo" "bar" "baz"))
+      "foo"
+      > (max < '())
+      #f
+
+   (b) Ocaml.  Return None for an empty list and a Some otherwise.
+      [2pt]
+      # max;;
+      - : ('a -> 'a -> bool) -> 'a list -> 'a option = <fun>
+      # max (>) [3;1;4;1;5;9;2;6];;
+      - : int option = Some 9
+      # max (<) [3;1;4;1;5;9;2;6];;
+      - : int option = Some 1
+      # max (>) [];;
+      - : 'a option = None
+
+
+
+Question 8 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.65: 
+   Ocaml.  Define maxfl, as above, using the function List.fold_left.
+   Do not use recursion.  [2pt]
+   # List.fold_left;;
+   - : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a = <fun>
+   # maxfl;;
+   - : ('a -> 'a -> bool) -> 'a list -> 'a option = <fun>
+   # maxfl (<) [2;7;8;1;8;2;8];;
+   - : int option = Some 1
+   # maxfl (>) ["foo";"bar";"baz"];;
+   - : string option = Some "foo"
+   # maxfl (<) [];;
+   - : 'a option = None
+
+
+
+Question 10 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.6551724137931034: 
+    Ocaml.  Fill in the column at the right with the response given by
+   the interactive toploop when the entry at the left is given.  [2pt]
+
+   +----------------------------------+----------------------------------------+
+   |List.map;;                        |                                        |
+   |                                  |                                        |
+   +----------------------------------+----------------------------------------+
+   |(+) 1;;                           |                                        |
+   |                                  |                                        |
+   +----------------------------------+----------------------------------------+
+   |1::2::3::[];;                     |                                        |
+   |                                  |                                        |
+   +----------------------------------+----------------------------------------+
+   |let car = function x::_ -> x      |                                        |
+   |          | _ -> failwith "car";; |                                        |
+   +----------------------------------+----------------------------------------+
+
+
+
+Question 11 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.5546218487394958: 
+    Define the function zipwith, which takes a function and two lists
+   and uses the function to merge the two lists into one.  Ensure the
+   lists are the same length without using a length function.  See the
+   examples for expected results.
+
+   (a) Scheme.  Return the first parameter if the lists are of differ-
+      ent lengths, otherwise return the expected result.  [3pt]
+      > (zipwith #f + '(1 2 3 4) '(5 6 7 8))
+      (6 8 10 12)
+      > (zipwith #f - '(1 2 3) '(4))
+      #f
+      > (zipwith #f * '() '())
+      ()
+      > (zipwith #f / '(1 2 3) '(4 5 6))
+      (1/4 2/5 1/2)
+
+   (b) Ocaml.  Use failwith "zipwith" if the lists are if different
+      lengths.  [3pt]
+      # zipwith;;
+      - : ('a -> 'b -> 'c) -> 'a list -> 'b list -> 'c list = <fun>
+      # zipwith (+) [1;2;3;4] [5;6;7;8];;
+      - : int list = [6; 8; 10; 12]
+      # zipwith (-) [1;2;3] [4];;
+      Exception: Failure "zipwith".
+      # zipwith ( * ) [] [];;
+      - : int list = []
+      # zipwith (/.) [1.;2.;3.] [4.;5.;6.];;
+      - : float list = [0.25; 0.4; 0.5]
+
+
+
+Question 12 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.5714285714285714: 
+    C.  Write a function to reverse a list.  Do not use malloc or
+   free.  Do not assign to any value field.  Make assignment only to
+   the link fields of the nodes.  The function is destructive of the
+   original list.  Return a pointer to the reversed list.  [2pt]
+                         |
+   struct node {         | struct node* reverse (struct node* head) {
+      int value;         |
+      struct node* link; |
+   };                    |
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.75: 
+    Unix.  What is the symbolic name for a user's home directory?
+    (A) $
+    (B) .
+    (C) /
+    (D) ~
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.6: 
+    Unix.  What keystroke indicates end of file at the Unix command
+    line?
+    (A) ^C
+    (B) ^D
+    (C) ^H
+    (D) ^Z
+
+
+
+Question 3 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.5454545454545454: 
+    Scheme.  What will indicate to the parent process that an error
+    has occurred?
+    (A) (exit 0)
+    (B) (exit 1)
+    (C) exit(0);
+    (D) exit(1);
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.5: 
+    Unix.  How might you locate a file called foobar.sbir?
+    (A) echo $foobar.sbir | grep --plain-file
+    (B) find $cmps-112 -name foobar.sbir
+    (C) for i in foobar.sbir do; echo $i; done
+    (D) grep foobar.sbir *
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.65: 
+    Unix.  Which environment variable must be adjusted in order to
+    find the location of programs that are not in the standard
+    directories?
+    (A) $HOME
+    (B) $PATH
+    (C) $TERM
+    (D) $USER
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.7241379310344828: 
+    Which of the following will not be written using tail recursion?
+    (A) Computing a Fibonacci number.
+    (B) Finding the sum of all elements in a list.
+    (C) Mapping a unary function onto a list.
+    (D) Reversing a list.
+
+
+
+Question 7 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.3333333333333333: 
+    Smalltalk.  What is 7?
+    (A) (3 + 4) value.
+    (B) 7 value.
+    (C) [3 + 4] value.
+    (D) [3 + 4] value: 7.
+
+
+
+Question 8 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.3333333333333333: 
+    Scheme.  What is ((lambda (x) x) (+ 2 3))?
+    (A) (+ 2 3)
+    (B) +
+    (C) 5
+    (D) x
+
+
+
+Question 9 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.16666666666666666: 
+    Scheme.  What is (3)?
+    (A) (caar '(1 2 3))
+    (B) (cadr '(1 2 3))
+    (C) (cdar '(1 2 3))
+    (D) (cddr '(1 2 3))
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.25: 
+    Smalltalk.  What is 1.4142135623730951 ?
+    (A) (sqrt 2.0)
+    (B) 2.0 ** 0.5
+    (C) 2.0 sqrt
+    (D) sqrt 2.0
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.9411764705882353: 
+    Ocaml.  What is the type of (+)?
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.2857142857142857: 
+    Ocaml.  Type checking is:
+    (A) strong and dynamic
+    (B) strong and static
+    (C) weak and dynamic
+    (D) weak and static
+
+                +------------------------------------+
+                |                                    |
+                |                                    |
+                |                                    |
+                |                                    |
+                |                                    |
+                |                                    |
+                |                                    |
+                |                                    |
+                |jpgs/functional-programming-joke.ps |
+                |                                    |
+                |                                    |
+                |                                    |
+                |                                    |
+                |                                    |
+                |                                    |
+                |                                    |
+                +------------------------------------+
+
+
+
+
+Question 1 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.4523809523809524: 
+   What is the output from each of the following when entered at the
+   interactive prompt?  [4pt]
+
+   +-------+---------------------------------------+--------------------------------+
+   |Ocaml  | # (+);;                               |                                |
+   +-------+---------------------------------------+--------------------------------+
+   |Ocaml  | # List.map;;                          |                                |
+   +-------+---------------------------------------+--------------------------------+
+   |Ocaml  | # (<);;                               |                                |
+   +-------+---------------------------------------+--------------------------------+
+   |Ocaml  | # (+.) 3.;;                           |                                |
+   +-------+---------------------------------------+--------------------------------+
+   |Scheme | > (apply * '(1 2 3))                  |                                |
+   +-------+---------------------------------------+--------------------------------+
+   |Scheme | > (map (lambda (x) (* 3 x)) '(1 2 3)) |                                |
+   +-------+---------------------------------------+--------------------------------+
+   |Scheme | > ((lambda (x y) (cons x y)) 3 '(4))  |                                |
+   +-------+---------------------------------------+--------------------------------+
+   |Scheme | > (let ((x 3) (y 4)) (* x y))         |                                |
+   +-------+---------------------------------------+--------------------------------+
+
+
+
+Question 2 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.5675675675675675: 
+   Code the function maximum which takes two arguments:  a comparison
+   function, and a list.  It returns the maximum element in the list
+   if the list is non-empty.
+
+    (a) Ocaml.  Return None if the list is empty.  [3pt]
+        # maximum;;
+        - : ('a -> 'a -> bool) -> 'a list -> 'a option = <fun>
+        # maximum (>) [3;1;4;1;5];;
+        - : int option = Some 5
+        # maximum (<) [3.;1.;4.;1.;5.];;
+        - : float option = Some 1.
+        # maximum (=) [];;
+        - : 'a option = None
+
+    (b) Scheme.  Return #f if the list is empty.  [3pt]
+        > maximum
+        #<procedure:maximum>
+        > (maximum > '(1 2 3 4 5))
+        5
+        > (maximum < '(1.0 2.0 3.0 4.0 5.0))
+
+
+Question 4 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.6206896551724138: 
+   Define the function sum without using any higher-order functions.
+
+    (a) Ocaml.  Use the following type:  [2pt]
+        val sum : float list -> float
+
+    (b) Scheme.  The result is whatever the + function naturally re-
+        turns.  [2pt]
+
+
+
+Question 5 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.6851851851851852: 
+   Define the function fold_left, whose arguments are a folding func-
+   tion, a unit value, and a list.  The unit value is used as the
+   leftmost argument to the folding function.
+
+    (a) Ocaml.  Use the following type:  [2pt]
+        val fold_left : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a
+
+    (b) Scheme.  Arguments are in the same order as the Ocaml ques-
+        tion.  [2pt]
+
+
+
+Question 6 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.6274509803921569: 
+   Define the function sum making use of fold_left.  The function
+   should satisfy the same requirements as the previous sum question,
+   and use the fold_left function defined above.
+
+    (a) Ocaml.  Fill in the space.  Do not alter anything to the left
+        of the equal (=) symbol.  [1pt]
+
+        # let sum = ________________________________________;;
+        val sum : float list -> float = <fun>
+
+    (b) Scheme.  [1pt]
+
+
+
+Question 7 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.5581395348837209: 
+   Smalltalk.  Extend class Array with method sum, which returns the
+   sum of all element of an array.  Make no attempt to verify that el-
+   ements are numbers.  [2pt]
+   st> a := #(1 2 3 4 5).
+   (1 2 3 4 5 )
+   st> a sum.
+   15
+   st> a := #().
+   ()
+   st> a sum.
+   0
+
+
+
+Question 8 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.40425531914893614: 
+   Smalltalk.  Extend class Array with method reverse, which reverses
+   the elements of an array.  [3pt]
+   st> a := #(1 2 3 4 5) copy.
+   (1 2 3 4 5 )
+   st> b := #(1 2 3 4) copy.
+   (1 2 3 4 )
+   st> a reverse.
+   (5 4 3 2 1 )
+   st> b reverse.
+   (4 3 2 1 )
+
+
+
+Question 9 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.41935483870967744: 
+   Ocaml.  Define eval so that it takes an expression as defined here.
+   Functions themselves are in the expression.  There is no hash table
+   in this question.  An example interaction is shown.  [2pt]
+   # type binfn = float -> float -> float;;
+   # type expr = Expr of binfn * expr * expr
+               | Num of float;;
+   # eval;;
+   - : expr -> float = <fun>
+   # eval (Expr ((+.),
+           Expr ((/.), Num 3., Num 4.),
+           Expr ((/.), Num 7., Num 8.)));;
+   - : float = 1.625
+
+
+
+Question 10 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.5806451612903226: 
+    Scheme.  Define evalexpr which takes an expression as an argument.
+   An expression is a number or a list consisting of a symbol repre-
+   senting an operator, followed by zero or more expressions.  Assume
+   fnhash is a hash table which maps symbols onto functions that may
+   be used to evaluate operators.  Apply the function to the result of
+   mapping eval onto the list of arguments.  Expressions are nested
+   arbitrarily deeply.  Assume all expresions are valid (no need for
+   error checking).  The result must always be a real or complex num-
+   ber.  [3pt]
+   > (evalexpr '(+ (* 2 3) (* 4 5)))
+
+
+Question 11 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.3333333333333333: 
+   0
+   > (evalexpr 3)
+
+
+Question 12 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.14285714285714285: 
+   0
+   > (evalexpr '(* (+ 8 3) (+ (* 2 9) 6)))
+
+
+Question 13 on Free Response on cmps112-2019q1-midterm.tt with accuracy 0.25: 
+   0
+   > (evalexpr '(/ 4 0))
+   +inf.0
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.45: 
+    What kind of type checking is used in Ocaml?
+    (A) strong and dynamic
+    (B) strong and static
+    (C) weak and dynamic
+    (D) weak and static
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.45: 
+    What kind of type checking is used in Scheme?
+    (A) strong and dynamic
+    (B) strong and static
+    (C) weak and dynamic
+    (D) weak and static
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.9411764705882353: 
+    Ocaml.  What is the type of (+)?
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.7586206896551724: 
+    What takes a function and a list, applies that function to every
+    element of the list, and returns a resulting list of the same
+    length as the argument list?
+    (A) apply
+    (B) fold_left
+    (C) filter
+    (D) map
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.8333333333333334: 
+    Assuming x is a proper list, what will return a list equivalent to
+    x?
+    (A) (car (cdr x) (cons x))
+    (B) (car (cons x) (cdr x))
+    (C) (cdr (car x) (cons x))
+    (D) (cdr (cons x) (car x))
+    (E) (cons (car x) (cdr x))
+    (F) (cons (cdr x) (car x))
+
+
+
+Question 7 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.3333333333333333: 
+    What is (cadr '((1 2) (3 4)))
+    (A) ()
+    (B) (2)
+    (C) (3 4)
+    (D) 1
+
+
+
+Question 8 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.5: 
+    How much stack space (not time) is taken by the following
+    function?
+    (define (f n)
+       (cond ((< n 0) #f)
+             ((= n 0) 0)
+             ((= n 1) 1)
+             (else (+ (f (- n 1))
+                      (f (- n 2))))))
+    (A) $ O ( 1 ) $
+    (B) $ O ( n ) $
+    (C) $ O ( n sup 2 ) $
+    (D) $ O ( 2 sup n ) $
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.3: 
+    What will create the list (1 2)?
+    (A) (cons (car 1) (cdr 2))
+    (B) (cons 1 (cons 2 '()))
+    (C) (cons 1 (cons 2 ()))
+    (D) (cons 1 2)
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.14285714285714285: 
+    The immediate ancestor of Scheme:
+    (A) Fortran
+    (B) Lisp
+    (C) ML
+    (D) \lambda-calculus
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.6666666666666666: 
+    Smalltalk.  What is the order of evaluation of:
+    a*b+c*d
+    (A) ((a*b)+c)*d
+    (B) (a*(b+c))*d
+    (C) (a*b)+(c*d)
+    (D) a*((b+c)*d)
+    (E) a*(b+(c*d))
+
+                    +---------------------------+
+                    |                           |
+                    |                           |
+                    |                           |
+                    |                           |
+                    |                           |
+                    |jpgs/duck-typing-2.ps      |
+                    |                           |
+                    |                           |
+                    |                           |
+                    |                           |
+                    |                           |
+                    +---------------------------+
+
+
+
+
+Question 1 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.7692307692307693: 
+   Define the function sum which will find the sum of all numbers in
+    a list.  Use as little function call stack space as possible.  Do
+    not use a higher order function.
+
+     (a) Scheme.  [2pt]
+
+     (b) OCaml.  [2pt]
+         # sum;;
+         - : int list -> int = <fun>
+
+
+
+Question 2 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.6666666666666666: 
+   Define the fold left function.  Use as little function call stack
+    space as possible.
+
+     (a) Scheme.  The order of arguments are the same as in OCaml.
+         [2pt]
+         > foldl
+         #<procedure:foldl>
+
+     (b) OCaml.  [2pt]
+         # List.fold_left;;
+         - : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a = <fun>
+
+
+
+Question 3 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.6111111111111112: 
+   Define the function sum using the fold left higher order function.
+
+     (a) Scheme.  Use foldl.  [1pt]
+
+     (b) OCaml.  Use List.fold_left.  [1pt]
+
+
+
+Question 4 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.782608695652174: 
+   Scheme.  Define the function evalexpr which takes as an argument
+    either a number or an expression.  A number is always returned as
+    real.  An expression is a list of length 3, where the car is a
+    binary function, and the cdr is a list of two expressions.  See
+    the Scheme interaction at the left.  Note that there is no hash
+    table for functions.  The actual function's value is in the list
+    in the function position.  Note the quasiquote and unquote.  [2pt]
+
+    +--------------------------------------------+
+    |> (evalexpr `(,+ (,* 2 3) (,* 4 5)))        |
+    |26.0                                        |
+    |> (evalexpr 3)                              |
+    |3.0                                         |
+    |> (evalexpr `(,* (,+ 8 3) (,+ (,* 2 9) 6))) |
+    |264.0                                       |
+    +--------------------------------------------+
+
+
+
+Question 5 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.5396825396825397: 
+   Smalltalk.  Extend class Array with a method find, which has a
+    single argument.  It returns the position (index) of the first
+    occurrence of that argument in the array.  It returns nil if not
+    found.  [2pt]
+                                  |
+    st> a := #( 3 1 4 1 5 9 2 6). | Array extend [
+    (3 1 4 1 5 9 2 6 )            |    find: value [
+    st> a find: 9.                |
+    6                             |
+    st> a find: 10.               |
+    nil                           |
+
+
+
+Question 6 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.5211267605633803: 
+   Smalltalk.  Define a block closure gcd with two arguments that
+    uses Euclid's algorithm to find the greatest common divisor of two
+    integers..  It might be called with the expression (gcd value: 20
+    value: 5).  The equivalent function in C is shown here.  Your
+    algorithm may assume that both $x > 0$ and $y > 0$.  [2pt]
+                                |
+    int gcd (int x, int y) {    | gcd := [:x :y |
+       while (x != y) {         |
+          if (x > y) x = x - y; |
+                else y = y - x; |
+       }                        |
+       return x;                |
+    }                           |
+
+
+
+Question 7 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.504950495049505: 
+   Smalltalk.  Extend class Array with a method fold:unit:, which
+    takes as arguments a block which combines two elements into a
+    single element, and a unit which is the identity operation for the
+    the block.  The result is the array folded into a single element
+    using the unit as a starter element.  Hint:  Think about fold left
+    in a functional language.  [2pt]
+                                   |
+    st> a := #(1 2 3 4 5).         | Array extend [
+    (1 2 3 4 5 )                   |    fold: block unit: id [
+    st> sum := [:x :y | x + y].    |       |result|
+    a BlockClosure                 |       result := id.
+    st> s := a fold: sum unit: 0.  |
+    15                             |
+    st> prod := [:x :y | x * y].   |
+    a BlockClosure                 |
+    st> p := a fold: prod unit: 1. |
+    120                            |
+
+
+
+Question 8 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.5522388059701493: 
+   Smalltalk.  Extend class Array with the keyword method innerprod
+    which computes the inner product of itself with its argument.
+    Note that an error is thrown if the sizes of the arrays are
+    different.  The formula for an inner product is shown at the left.
+    Finish the method.  [2pt]
+                                           |
+    $ p = sum from i {a sub i} {b sub i} $ | Array extend [
+                                           |    innerprod: other [
+                                           |       self size = other size
+                                           |       ifFalse: [^ self error: 'innerprod different sizes']
+                                           |       ifTrue: [
+
+
+
+Question 9 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.45977011494252873: 
+   OCaml.  Assume the declarations in the top of the table at the
+    left.  Define the function eval which takes an expr as an argument
+    and returns the float value.  Output should match the bottom of
+    the table.  Note that there are no hash tables in this question.
+    The functions are actually present as arguments to the Expr
+    constructor.  [2pt]
+
+    +----------------------------------------+
+    |type binfn = float -> float -> float;;  |
+    |type expr = Expr of binfn * expr * expr |
+    |          | Num of float;;              |
+    +----------------------------------------+
+    |# eval;;                                |
+    |- : expr -> float = <fun>               |
+    |# eval (Expr ((+.),                     |
+    |        Expr ((/.), Num 3., Num 4.),    |
+    |        Expr ((/.), Num 7., Num 8.)));; |
+    |- : float = 1.625                       |
+    +----------------------------------------+
+
+
+
+Question 10 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.5609756097560976: 
+    Write a function to reverse a list.
+
+     (a) Scheme.  [2pt]
+         > reverse
+         #<procedure:reverse>
+         > (reverse '(1 2 3 4 5))
+         (5 4 3 2 1)
+         > (reverse '())
+         ()
+
+     (b) OCaml.  [2pt]
+         # reverse;;
+         - : 'a list -> 'a list = <fun>
+         # reverse [1;2;3;4;5];;
+         - : int list = [5; 4; 3; 2; 1]
+         # reverse [];;
+         - : 'a list = []
+
+     (c) C/C++.  Do not use malloc(3) or free(3).  Do not change any
+         value field.  Manipulate the pointer fields.  After modifying
+         the list, return a pointer to the new head of the list.  Use
+         a loop, not recursion.  [2pt]
+                               |
+         struct node {         | struct node* reverse (struct node* head) {
+            int value;         |
+            struct node* link; |
+         };                    |
+
+
+
+Question 11 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.6698113207547169: 
+    Scheme.  Draw a picture of the following expression.  For each
+    cell, draw a small box with two parts.  The first few cells are
+    drawn for you.  Fill it in as appropriate and draw more boxes.
+    Write the Greek letter phi (\phi) in each part of a cons cell that
+    has a null pointer.  Hint:  Since this is a proper list, only some
+    cdrs have null pointers.  For each part of a cell containing a
+    symbol, write the appropriate letter inside that part of the cell.
+    If a part of a cell contains a pointer, draw an arrow from that
+    cell to the one it points at.  If the arrow is in the cdr part of
+    the cell draw it horizontally to the right.  If it is in the car
+    part of the cell, draw it pointing downward.  [2pt]
+
+    '((a (b)) (c d e) ((e) f))
+.PS 3i
+line from (0,0) to (2,0)
+line from (0,1) to (2,1)
+line from (0,0) to (0,1)
+line from (1,0) to (1,1)
+line from (2,0) to (2,1)
+arrowht = .5
+arrowwid = .25
+circle fill 1 rad .125 at (1.5,.5)
+arrow from (1.5,.5) to (10,.5)
+line from (10,0) to (12,0)
+line from (10,1) to (12,1)
+line from (10,0) to (10,1)
+line from (11,0) to (11,1)
+line from (12,0) to (12,1)
+circle fill 1 rad .125 at (.5,.5)
+arrow from (.5,.5) to (.5,-1)
+line from (0,-1) to (2,-1)
+line from (0,-2) to (2,-2)
+line from (0,-1) to (0,-2)
+line from (1,-1) to (1,-2)
+line from (2,-1) to (2,-2)
+.PE
+
+
+
+
+Question 1 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.65: 
+    What kind of function is equivalent to a loop in an imperative
+   language?
+   (A) head recursive
+   (B) mutually recursive
+   (C) self recursive
+   (D) tail recursive
+
+
+
+Question 2 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.8: 
+    OCaml.  Fill in the blank.
+   # ____ ((+)1) [1;2;3];;
+   - : int list = [2; 3; 4]
+   (A) List.fold_left
+   (B) List.fold_right
+   (C) List.map
+   (D) List.tl
+
+
+
+Question 3 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.5714285714285714: 
+    OCaml.  Fill in the blank.  Use as little function call stack space
+   as possible.
+   # ____ (+) 0 [1;2;3];;
+   - : int = 6
+   (A) List.fold_left
+   (B) List.fold_right
+   (C) List.map
+   (D) List.tl
+
+
+
+Question 4 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.6: 
+    Which of the following languages has a strong and dynamic type
+   checking system?
+   (A) C and OCaml.
+   (B) OCaml and Scheme.
+   (C) Scheme and C/C++.
+   (D) Scheme and Smalltalk.
+
+
+
+Question 5 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.47058823529411764: 
+    Bash.  Which environment variable must be adjusted in your .bash_
+   profile so that programs in a non-standard location may be used?
+   (A) $HOME
+   (B) $LANG
+   (C) $PATH
+   (D) $USER
+
+
+
+Question 6 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.5128205128205128: 
+    Parsing refers to:
+   (A) Executing a sequence of statements in the proper order,
+       poasibly altered by interpreting gotos.
+   (B) Inserting labels into the label table.
+   (C) Reading characters from the input and assembling them into
+       tokens.
+   (D) Verifying tokens are in correct syntactic order and assembling
+       the abstract syntax.
+
+
+
+Question 7 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.16666666666666666: 
+    Scheme.  What is 2?
+   (A) (caar '(1 2 3))
+   (B) (cadr '(1 2 3))
+   (C) (cdar '(1 2 3))
+   (D) (cddr '(1 2 3))
+
+
+
+Question 8 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.9411764705882353: 
+    OCaml.  What is the type of ( * )?
+   (A) int * int -> int
+   (B) int * int <- int
+   (C) int -> int -> int
+   (D) int <- int <- int
+
+
+
+Question 9 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.5686274509803921: 
+    Smalltalk.  What does 3 + 4 mean?
+   (A) 3 and + are messages that are sent to the object 4.
+   (B) The function + takes 3 and 4 as arguments and returns a value.
+   (C) The message + 4 is sent to the object 3.
+   (D) The message + is sent to the object 3, which results in a
+       curried function that accepts 4 as an argument.
+
+
+
+Question 10 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.5: 
+    Scheme.  Given (define (f x y) (x y y)), what will return 6?
+   (A) (f * 2)
+   (B) (f + 3)
+   (C) (f 3 +)
+   (D) (f 3 3)
+
+
+
+Question 11 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.5: 
+    OCaml.  How much function call stack space is occupied by the
+   following function?
+   let f n = if n <= 1 then n
+             else f (n - 1) + f (n - 2);;
+   (A) $ O ( 1 ) $
+   (B) $ O ( n ) $
+   (C) $ O ( n sup 2 ) $
+   (D) $ O ( 2 sup n ) $
+
+
+
+Question 12 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.7: 
+    C/C++/Java.  Which of the following binary operators is evaluated
+   in a normal (meaning lazy) order?  That means that sometimes the
+   right operand is not evaluated.
+   (A) ++
+   (B) ==
+   (C) []
+   (D) ||
+
+
+
+
+Question 1 on Free Response on cmps112-2017q4-final.tt with accuracy 0.3333333333333333: 
+   For each language described here, fill in the name of the language.
+   Choose from among the following languages:  AWK, Ada, Algol 60, BC-
+   PL, Bash, Basic, C++, C, COBOL, FORTRAN, Forth, Haskell, Intercal,
+   Java, Lisp, ML, OCaml, PL/I, Pascal, Perl, Prolog, Scheme, Simu-
+   la 67, Smalltalk.  Grading:  deduct 0.5 point for each wrong or
+   missing answer, but do not score less than 0.  [2pt]
+
+   +---------------+-------------------------------------------------------------------------+
+   |               | Bjarne Stroustrup's most noted contribution to language design.         |
+   +---------------+-------------------------------------------------------------------------+
+   |               | Business data processing language, designed by Grace Hopper (1959).     |
+   +---------------+-------------------------------------------------------------------------+
+   |               | Designed at Sun Microsystems, James Gosling leading.                    |
+   +---------------+-------------------------------------------------------------------------+
+   |               | Mostly-functional statically-scoped language descended from Lisp.       |
+   +---------------+-------------------------------------------------------------------------+
+   |               | Numeric and scientific computation language developed at IBM (1957).    |
+   +---------------+-------------------------------------------------------------------------+
+   |               | Simulation language that influenced the design of C++.                  |
+   +---------------+-------------------------------------------------------------------------+
+   |               | DOD language named for Lord Byron's daughter, the Countess of Lovelace. |
+   +---------------+-------------------------------------------------------------------------+
+
+
+Question 2 on Free Response on cmps112-2017q4-final.tt with accuracy 0.4583333333333333: 
+   Some examples of polymorphism are given in the following table.  In
+   each box, write both the general and specific category using the
+   terms:  universal, ad hoc, conversion, parametric, inclusion, over-
+   loading.  [2pt]
+
+   +-------------------------------+--------------------------------+
+   |class shape { }                | class stack<item> { };         |
+   |class square extends shape { } | stack<Integer> si;             |
+   +-------------------------------+--------------------------------+
+   |void foo (double d);           | double sqrt (double);          |
+   |void foo (int i);              | n = sqrt (6);                  |
+   +-------------------------------+--------------------------------+
+
+
+Question 3 on Free Response on cmps112-2017q4-final.tt with accuracy 0.532258064516129: 
+   Smalltalk.  Extend the class Array, that is, add a new method to
+   the existing class array.  The keyword method merge takes a single
+   other array as an argument and produces a new array containing all
+   the elements of both arrays in sorted order using the binary opera-
+   tor <.  Assume both arrays are already in sorted order.  Of course,
+   you need to create a new array and cycle through the old arrays
+   copying elements of each of the input arrays.  And when one array
+   runs out, copy all elements of the other array.  [6pt]
+   st> #(1 3 5 7 9) merge: #(2 4 6 8 10).
+   (1 2 3 4 5 6 7 8 9 10 )
+   st> #() merge: #(1 2 3).
+   (1 2 3 )
+   st> #(4 44 444 999) merge: #()
+   (4 44 444 999 )
+
+
+
+Question 4 on Free Response on cmps112-2017q4-final.tt with accuracy 0.6382978723404256: 
+   Ocaml.  Define the function merge which merges two sorted lists ac-
+   cording to a predicate and produces a resulting list.  Assume the
+   argument list are sorted.  [3pt]
+   # merge (<) [1;3;5;7;9] [2;4;6;8];;
+   - : int list = [1; 2; 3; 4; 5; 6; 7; 8; 9]
+   # merge (>) [9;5;3;1] [77;2;-5];;
+   - : int list = [77; 9; 5; 3; 2; 1; -5]
+   # merge (<) [] [1;2;3];;
+   - : int list = [1; 2; 3]
+
+
+
+Question 5 on Free Response on cmps112-2017q4-final.tt with accuracy 0.3787878787878788: 
+   Scheme.  Define the function merge which merges two sorted lists
+   according to a predicate and produces a resulting list.  Assume the
+   argument list are sorted.  [3pt]
+   > (merge < '(1 3 5 7 9) '(2 4 6 8))
+   (1 2 3 4 5 6 7 8 9)
+   > (merge > '(88 77 66) '(99 70 55))
+   (99 88 77 70 66 55)
+   > (merge < '(1 3 5 7) '())
+   (1 3 5 7)
+
+
+
+Question 6 on Free Response on cmps112-2017q4-final.tt with accuracy 0.6285714285714286: 
+   Smalltalk.  Define a class Max which has a keyword class method max
+   whose argument is an array.  It returns the maximum value in the
+   array.  If the array is empty, it returns nil.  [4pt]
+   st> Max max: #(3.14159265358979 1.4142135623730951
+
+
+Question 9 on Free Response on cmps112-2017q4-final.tt with accuracy 0.26666666666666666: 
+   Prolog.
+    (a) Define length.  [1pt]
+        | ?- length([],N).
+        N = 0
+        | ?- length([1,2,3,4,5],N).
+        N = 5
+
+    (b) Define sum.  [1pt]
+        | ?- sum([],N).
+        N = 0
+        | ?- sum([1,2,3,4,5],N).
+        N = 15
+
+
+
+Question 10 on Free Response on cmps112-2017q4-final.tt with accuracy 0.6597938144329897: 
+    Prolog.  Write a list of facts such that arrow(X,Y) indicates that
+   there is an arrow X -> Y.  Write a predicate path(X,Y) which says
+   ``yes'' if there is a path from X to Y.  There is always a path
+   from a node to itself.  Assume that the graph is acyclic (no cy-
+   cles).  [2pt]
+
+.PS 0.9i
+arrowht = .2
+arrowwid = arrowht/2
+r=4*circlerad
+A: circle "a"
+B: circle "b" at A+(r,r/2)
+C: circle "c" at A+(r,-r/2)
+D: circle "d" at C+(r,r/2)
+E: circle "e" at C+(r,-r/2)
+arrow from A to B chop
+arrow from A to C chop
+arrow from C to D chop
+arrow from C to D chop
+arrow from C to E chop
+.PE
+
+
+
+Question 11 on Free Response on cmps112-2017q4-final.tt with accuracy 0.6341463414634146: 
+    If mother(M,X) and father(F,X) means that M and F are the parents
+   of X (respectively), and that the database contains facts female(X)
+   and male(X), define the following predicates:
+
+    (a) parent(X,Y) if X is the parent of Y.  [1pt]
+
+    (b) sister(X,Y) if X is the sister (including half-sister) of Y.
+        [1pt]
+
+
+
+Question 12 on Free Response on cmps112-2017q4-final.tt with accuracy 0.5963302752293578: 
+    Define the function map2 which takes a function and a pair of
+   lists and returns a list by applying the function pairwise to the
+   elements of the list and returns new list in the same order as the
+   input lists.  If the lists are of different length, ignore exces-
+   sive elements of the longer list.
+
+    (a) Scheme.  [2pt]
+        > (map2 + '(1 2 3 4) '(5 6 7))
+        (6 8 10)
+        > (map2 * '(1 2 3 4 5) '(6 7 8 9))
+        (6 14 24 36)
+        > (map2 / '(1 2 3 4) '())
+        ()
+
+    (b) Ocaml.  Use pattern matching.  Do not use List.hd or List.tl.
+        [2pt]
+        # map2;;
+        - : ('a -> 'b -> 'c) -> 'a list -> 'b list -> 'c list = <fun>
+        # map2 (+) [1;2;3;4] [5;6;7];;
+        - : int list = [6; 8; 10]
+        # map2 ( * ) [1;2;3;4;5] [6;7;8;9];;
+        - : int list = [6; 14; 24; 36]
+        # map2 (/) [1;2;3;4] [];;
+        - : int list = []
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.9166666666666666: 
+    What is the type of f:
+    let f (x, y) = x + y;;
+    (A) f : int * int * int
+    (B) f : int * int -> int
+    (C) f : int -> int * int
+    (D) f : int -> int -> int
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.8461538461538461: 
+    What is the type of g:
+    let g x y = x * y;;
+    (A) f : int * int * int
+    (B) f : int * int -> int
+    (C) f : int -> int * int
+    (D) f : int -> int -> int
+
+
+
+Question 3 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.5882352941176471: 
+    What is the type of inc?
+    let inc = (+) 1;;
+    (A) inc : 'a int
+    (B) inc : int * int
+    (C) inc : int -> int
+    (D) inc : int <'a>
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.3684210526315789: 
+    Smalltalk determines if an object can respond to a message by:
+    (A) duck typing
+    (B) its interface
+    (C) its template declaration
+    (D) parametric polymorphism
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.3333333333333333: 
+    Prolog:
+    | ?- X is cos(pi).
+    (A) X = -1.0
+    (B) X = 1.2246467991473532e-16
+    (C) X = 3.1415926535897931
+    (D) no
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.6666666666666666: 
+    What is equivalent to just a itself?
+    (A) (cons (car a) (cdr a))
+    (B) (car (cons a) (cdr a))
+    (C) (cons (cdr a) (car a))
+    (D) (cdr (cdr a) (cons a))
+
+
+
+Question 7 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.46153846153846156: 
+    Prolog determines the values of expressions by:
+    (A) lazy evaluation
+    (B) template parameters
+    (C) type inference
+    (D) unification
+
+
+
+Question 8 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.08333333333333333: 
+    What is (1 2 3 4)
+    (A) (apply * '(1 2 3 4))
+    (B) (cons * '(1 2 3 4))
+    (C) (foldl * '(1 2 3 4))
+    (D) (map * '(1 2 3 4))
+
+
+
+Question 9 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.35294117647058826: 
+    In Scheme and Smalltalk, type checking is:
+    (A) strong and dynamic
+    (B) strong and static
+    (C) weak and dynamic
+    (D) weak and static
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.8333333333333334: 
+    What has type int list in Ocaml?
+    (A) (1,2,3,4);;
+    (B) (1;2;3;4);;
+    (C) [1,2,3,4];;
+    (D) [1;2;3;4];;
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.46153846153846156: 
+    A function like fold_left is tail recursive.  How much stack space
+    does it use?
+    (A) $ O ( 1 ) $
+    (B) $ O ( log sub 2 n ) $
+    (C) $ O ( n ) $
+    (D) $ O ( n log sub 2 n ) $
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.4817073170731707: 
+    If fold_left takes a function whose execution time is $ O ( 1 ) $
+    and is applied to a list of length $ O ( n ) $, how much time will
+    it take?
+    (A) $ O ( 1 ) $
+    (B) $ O ( log sub 2 n ) $
+    (C) $ O ( n ) $
+    (D) $ O ( n log sub 2 n ) $
++---------------------------------------------------------------------+
+| FORTRAN,  the  infantile  disorder,  by now nearly 20 years old, is |
+|hopelessly inadequate for whatever computer application you have  in |
+|mind  today:   it is now too clumsy, too risky, and too expensive to |
+|use.                                                                 |
+| PL/I, the fatal disease, belongs more to the problem  set  than  to |
+|the solution set.                                                    |
+| It  is practically impossible to teach good programming to students |
+|that have had a prior exposure to BASIC:  as  potential  programmers |
+|they are mentally mutilated beyond hope of regeneration.             |
+| The use of COBOL cripples the mind; its teaching should, therefore, |
+|be regarded as a criminal offence.                                   |
+| APL is a mistake, carried through to perfection.  It  is  the  lan- |
+|guage  of the future for the programming techniques of the past:  it |
+|creates a new generation of coding bums.                             |
+| In the good old days physicists repeated each other's  experiments, |
+|just  to  be  sure.   Today  they stick to FORTRAN, so that they can |
+|share each other's programs, bugs included.                          |
+|                                                                     |
+|-- EWD498:  ``How do we tell truths that might hurt?''               |
+|prof. dr. Edsger W. Dijkstra, 1975.                                  |
+|http://www.cs.utexas.edu/users/EWD/transcriptions/EWD04xx/           |
++EWD498.html----------------------------------------------------------+
+
+
+
+
+Question 1 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.46153846153846156: 
+    What will unexpectly start a comment?
+    (A) let f = (*);;
+    (B) let f = (+);;
+    (C) let f = (-);;
+    (D) let f = (/);;
+
+
+
+Question 2 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.52: 
+    C++ templates are implemented by:
+    (A) compiling all template parameters as type Object.
+    (B) recompiling each template separately for each different
+        parameter.
+    (C) tagging all non-pointer fields in an object.
+    (D) using a virtual function table.
+
+
+
+Question 3 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.4642857142857143: 
+    Parametric polymorphism is implemented in Java by:
+    (A) compiling all generic parameters as Objects.
+    (B) recompiling each generic parameter separately for each
+        different parameter.
+    (C) tagging all non-pointer fields in an object.
+    (D) using a virtual function table.
+
+
+
+Question 4 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.3: 
+    "Lazy" evaluation is also known as __ order evaluation.
+    (A) applicative
+    (B) functional
+    (C) normal
+    (D) unified
+
+
+
+Question 5 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.4375: 
+    PL/I's non-local goto (unwinding the function call stack several
+    levels) can be evaluated in C++ and Java using:
+    (A) break
+    (B) continue
+    (C) return
+    (D) throw
+
+
+
+Question 6 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.36363636363636365: 
+    In Smalltalk, the value of an uninitialized variable is:
+    (A) 0
+    (B) nan
+    (C) nil
+    (D) nullptr
+
+
+
+Question 7 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.6666666666666666: 
+    In Smalltalk, what is 5?
+    (A) (1 + 4) value.
+    (B) <1 + 4> value.
+    (C) [1 + 4] value.
+    (D) {1 + 4} value.
+
+
+
+Question 8 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.5: 
+    What is a Scheme comment?
+    (A) (*...*)
+    (B) /*...*/
+    (C) //...
+    (D) ;;...
+
+
+
+Question 9 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.8333333333333334: 
+    Given the following Smalltalk definition, what returns 4?
+    a := [:x| x + 1].
+    (A) a 3.
+    (B) a at: 3.
+    (C) a value: 3.
+    (D) a x: 3.
+
+
+
+Question 10 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.2222222222222222: 
+    Who write code for Charles Babbage's difference engine (if it had
+    been built)?
+    (A) Alonzo Church
+    (B) Grace Hopper
+    (C) Ada Lovelace
+    (D) Alan Turing
+
+
+
+Question 11 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.5: 
+    Which C++ operator is not lazy?
+    (A) &&
+    (B) <<
+    (C) ? :
+    (D) ||
+
+
+
+Question 12 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.4233128834355828: 
+    Which can be a Prolog fact?
+    (A) foo(X,Y).
+    (B) foo(X,y).
+    (C) foo(x,Y).
+    (D) foo(x,y).
++---------------------------------------------------------------------+
+| I  found  the  UCSC campus not an inspiring place, and the longer I |
+|stayed there, the more depressing it became.  The place seemed  most |
+|successful  in  hiding all the usual symptoms of a seat of learning. |
+|In the four-person apartment we occupied, only one of the four desks |
+|had a reading lamp, and the chairs in front of the desks were so low |
+|that writing at the desks was not comfortable.  Probably it  doesn't |
+|matter.   Can  UCSC  students  write?   Do they need to?  The notice |
+|boards showed ads from typing services ``Grammar and  spelling  cor- |
+|rected.''.   (One  of  these ads itself contained a spelling error!) |
+|Blackboards were hardly sufficient;  there used to be neither bucket |
+|not  sponge;   the acoustics were from bad to terrible;  the PA sys- |
+|tems in the large lecture hall and in the theatre  were  inadequate; |
+|...   in  the  one  and only public place where we could meet in the |
+|evening -- ``Idler's Cafe'' -- conversation was  impossible  as  the |
+|result  of  the  summum  of  vulgarity:  a row of noisy pin-ball ma- |
+|chines!  And -- as I am told:  even by dormitory  standards  --  the |
+|food was terrible.  ...                                              |
+|                                                                     |
+|--  EWD714:   ``Trip report E.W.Dijkstra, Mission Viejo, Santa Cruz, |
+|Austin, 29 July - 8 September 1979.''                                |
+|prof. dr. Edsger W. Dijkstra, 14 September 1979,                     |
+|Plataanstraat 5, 5671 AL NUENEN, The Netherlands                     |
+|https://www.cs.utexas.edu/users/EWD/transcriptions/EWD07xx/          |
++EWD714.html----------------------------------------------------------+
+
+
+
+
+Question 1 on Free Response on cmps112-2018q1-final.tt with accuracy 0.5652173913043478: 
+   Smalltalk.  Define a block sum whose value: message returns the sum
+   of the Numbers of an array.  [2pt]
+   st> sum1 value: #(1 2 3 4 5).
+   15
+
+
+
+Question 2 on Free Response on cmps112-2018q1-final.tt with accuracy 0.6216216216216216: 
+   Without using higher-order functions, define sum which returns the
+   sum of numbers in a list.
+
+    (a) Ocaml.  [2pt]
+        # sum;;
+        - : int list -> int = <fun>
+        # sum [1;2;3;4;5];;
+        - : int = 15
+
+    (b) Scheme.  [2pt]
+        > (sum '(1 2 3 4 5))
+        15
+
+    (c) Prolog.  [2pt]
+        | ?- sum([1,2,3,4,5],N).
+        N = 15
+        yes
+
+
+
+Question 3 on Free Response on cmps112-2018q1-final.tt with accuracy 0.5652173913043478: 
+   Define sum as described above, without recursion, but using the
+   left fold function.
+
+    (a) Ocaml.  [1pt]
+        # List.fold_left;;
+        - : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a = <fun>
+
+    (b) Scheme.  The order of arguments to foldl are the same as in
+        Ocaml.  [1pt]
+        > foldl
+        #<procedure:foldl>
+
+CMPS-112 · Programming Languages · Winter 2018 · Final Exam     2 of 5
+
+
+
+Question 4 on Free Response on cmps112-2018q1-final.tt with accuracy 0.45: 
+   Each box in the following table represents a kind of polymorphism.
+   In each box, write two terms from the following list which de-
+   scribes that particular kind of polymorphism:  ad hoc, conversion,
+   inclusion, overloading, parametric, universal.  [2pt]
+
+   +---------------------------------+----------------------------------+
+   |template <typename T>            | int i, j; string s, t;           |
+   |class stack { }                  | i += j; s += t;                  |
+   |                                 |                                  |
+   +---------------------------------+----------------------------------+
+   |class B extends A {              | double add (double a, double b); |
+   |}                                | double x = add (3, 4);           |
+   |                                 |                                  |
+   +---------------------------------+----------------------------------+
+
+
+Question 5 on Free Response on cmps112-2018q1-final.tt with accuracy 0.5882352941176471: 
+   Prolog.  Assume a database with facts matching the following
+   queries:
+   female(Person), male(Person), parent(Parent,Child).
+   Define the following rules:
+
+    (a) sister(Sister,Sibling) [1pt]
+
+    (b) father(Father,Child) [1pt]
+
+    (c) grandmother(Grmother,Grchild) [1pt]
+
+
+
+Question 6 on Free Response on cmps112-2018q1-final.tt with accuracy 0.42: 
+   Smalltalk.  Extend class Array with a keyword message findpos:,
+   which searches an array for the first element in it that is equal
+   to the argument.  Return nil if not found.  [3pt]
+   st> #(11 22 33 44 99 88 77 66) findpos: 88.
+   6
+   st> #(11 22 33 44 99 88 77 66) findpos: 102.
+   nil
+
+
+
+Question 7 on Free Response on cmps112-2018q1-final.tt with accuracy 0.4: 
+   Ocaml.  Define fold_left.  [2pt]
+   # open List;;
+   # fold_left;;
+   - : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a = <fun>
+
+CMPS-112 · Programming Languages · Winter 2018 · Final Exam     3 of 5
+
+
+
+Question 8 on Free Response on cmps112-2018q1-final.tt with accuracy 0.7457627118644068: 
+   Ocaml.  Define a function zip which takes two lists as arguments
+   and returns a list of tuples containing the corresponding elements.
+   If the lists are of different lengths, ignore excess elements of
+   the longer list.  [2pt]
+   # zip;;
+   - : 'a list -> 'b list -> ('a * 'b) list = <fun>
+   # zip [1;2;3] [4;5;6];;
+   - : (int * int) list = [(1, 4); (2, 5); (3, 6)]
+   # zip [1;2;3;4;5;6;7;8] [3;6;9];;
+   - : (int * int) list = [(1, 3); (2, 6); (3, 9)]
+
+
+
+Question 9 on Free Response on cmps112-2018q1-final.tt with accuracy 0.5238095238095238: 
+   Scheme.  Define a function zip which takes two lists as arguments
+   and returns a list of lists containing the corresponding elements.
+   That is, for the inner lists, the car is taken from the first list,
+   the cadr is from the second list, and the cddr is '().  Ignore ex-
+   cess elements from the longer list.  [3pt]
+   > (zip '(1 2 3) '(4 5 6))
+   ((1 4) (2 5) (3 6))
+   > (zip '(1 2 3 4 5 6 7 8) '(3 6 9))
+   ((1 3) (2 6) (3 9))
+
+
+
+Question 10 on Free Response on cmps112-2018q1-final.tt with accuracy 0.7358490566037735: 
+    Prolog.  Given the facts listed here, write a relation chow_time
+   with a single list argument, and which will succeed if anything in
+   the list will get eaten.  Hint:  The function member(X,Y) checks to
+   see if the item X is a member of the list Y.  Write the relation
+   chow_time, which has a list argument and succeeds [2pt]
+   eats(fox,chicken).
+   eats(chicken,grain).
+
+
+
+Question 11 on Free Response on cmps112-2018q1-final.tt with accuracy 0.6: 
+    Scheme.  Write a function filter which takes a predicate and a
+   list and returns a list whose elements are in the same order as the
+   input list, but which contains only elements for which the predi-
+   cate is true.  Use a let form so that the functions car and cdr are
+   not called more than once anywhere in the function.  [3pt]
+   > (filter (lambda (x) (> x 0)) '(-3 44 72 -91 202 0 -34))
+   (44 72 202)
+
+CMPS-112 · Programming Languages · Winter 2018 · Final Exam     4 of 5
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.5625: 
+    If a function's arguments are always evaluated before the function
+    is called, that is __ order evaluation.
+    (A) applicative
+    (B) curried
+    (C) normal
+    (D) object-oriented
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.4117647058823529: 
+    An access (static) link is needed in languages with:
+    (A) a function call stack
+    (B) inner classes
+    (C) nested classes
+    (D) nested functions
+
+
+
+Question 3 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.5: 
+    # sqrt;;
+    (A) - : float * float = <fun>
+    (B) - : float -> float = <fun>
+    (C) - : int * int = <fun>
+    (D) - : int -> int = <fun>
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 1.0: 
+    # (<) 2;;
+    (A) - : 'a -> bool = <fun>
+    (B) - : bool -> 'a = <fun>
+    (C) - : bool -> int = <fun>
+    (D) - : int -> bool = <fun>
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.25: 
+    The structured program theorem says that only three programming
+    constructs are necessary:  sequence (;), conditional (if), and
+    looping (while).  This was proved by:
+    (A) Corrado Böhm & Giuseppe Jacopini
+    (B) Donald Knuth
+    (C) Edsger Dijkstra
+    (D) Niklaus Wirth
+
+
+
+Question 7 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.5714285714285714: 
+    Prolog uses __ to set the values of variables.
+    (A) pointer dereferencing
+    (B) template instantiation
+    (C) type inference
+    (D) unification
+
+
+
+Question 8 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.5: 
+    Java has [x] inheritance of classes and [y] inheritance of
+    interfaces.
+    (A) [x] = multiple, [y] = multiple
+    (B) [x] = multiple, [y] = single
+    (C) [x] = single, [y] = multiple
+    (D) [x] = single, [y] = single
+
+
+
+Question 9 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.625: 
+    What Perl statement will copy all input to the standard output?
+    (A) print <> while;
+    (B) print while <>;
+    (C) while <> print;
+    (D) while print <>;
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.4: 
+    Which C/C++/Java operator uses normal order evaluation?
+    (A) &&
+    (B) ++
+    (C) --
+    (D) ==
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.3076923076923077: 
+    Grace Hopper, USN, lead the design team for which programming
+    language?
+    (A) ALGOL 60
+    (B) BASIC
+    (C) COBOL
+    (D) FORTRAN
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 0.2777777777777778: 
+    What language uses ``duck typing'' to determine method dispatch?
+    (A) C++
+    (B) Java
+    (C) Ocaml
+    (D) Smalltalk
+                     +--------------------------+
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |jpgs/duck-typing.ps       |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     +--------------------------+
+
+CMPS-112 · Programming Languages · Winter 2018 · Final Exam     5 of 5
+
+
+
+
+Question 1 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.45652173913043476: 
+    In Java, parametric polymorphism is implemented by:
+    (A) recompiling functions from each class when they are
+        instantiated.
+    (B) representing all generic parameters as objects, and performing
+        implicit casting operations.
+    (C) tagging the low-order bit of each field of a structure to
+        distinguish pointers from other things.
+    (D) using macro substitution when the preprocessor is run ahead of
+        compilation.
+
+
+
+Question 2 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.35: 
+    When a garbage collector forms the closure of the root set, it
+    identifies all __ objects on the heap.
+    (A) dead
+    (B) live
+    (C) reachable
+    (D) unreachable
+
+
+
+Question 3 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.4444444444444444: 
+    What will make Smalltalk print 1.4142135623730951 ?
+    (A) (sqrt 2)
+    (B) 2 sqrt.
+    (C) X is sqrt(2).
+    (D) sqrt 2.0;;
+
+
+
+Question 4 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.6666666666666666: 
+    Which function takes a function $f$ and a list, applies $f$ to
+    every element of the list, and returns a new list of the same
+    length whose values are $f(x)$?
+    (A) filter
+    (B) fold_left
+    (C) fold_right
+    (D) map
+
+
+
+Question 5 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.6: 
+    What is the type of the argument of f in the Ocaml statement let f
+    () = 3
+    (A) null
+    (B) nullptr
+    (C) unit
+    (D) void
+
+
+
+Question 6 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.4: 
+    What might be a Prolog fact?
+    (A) foo(BAR,BAZ).
+    (B) foo(BAR,baz).
+    (C) foo(bar,BAZ).
+    (D) foo(bar,baz).
+
+
+
+Question 7 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.5714285714285714: 
+    If a function $g$ is nested inside a function $f$, what does $g$
+    need in order to refer to the local variables of $f$?
+    (A) dynamic link
+    (B) result register
+    (C) return address
+    (D) static link
+
+
+
+Question 8 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.4375: 
+    An Ocaml pattern match of x::y::z will match a list of at a
+    minimum, __ elements.
+    (A) 1
+    (B) 2
+    (C) 3
+    (D) 4
+
+
+
+Question 9 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.3333333333333333: 
+    What is ((lambda (x) x) (+ 2 3))?
+    (A) (+ 2 3)
+    (B) +
+    (C) 5
+    (D) x
+
+
+
+Question 10 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.6666666666666666: 
+    What is the parenthesized equivalent of the Smalltalk expression a
+    b c: d?
+    (A) ((a b) c: d)
+    (B) (a (b c: d))
+    (C) (a b) (c: d)
+    (D) a ((b c:) d)
+
+
+
+Question 11 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.16666666666666666: 
+    What is 2?
+    (A) (caar (1 2 3))
+    (B) (cadr (1 2 3))
+    (C) (cdar (1 2 3))
+    (D) (cddr (1 2 3))
+
+
+
+Question 12 on Multiple Choice part 2 on cmps112-2018q1-final.tt with accuracy 0.6428571428571429: 
+    Is half of two plus two equal to two or three?
+    (A) two
+    (B) three
+    (C) yes
+    (D) no
+                     +--------------------------+
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |jpgs/functional-programming-joke.ps
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     |                          |
+                     +--------------------------+
+
+
+
+
+Question 1 on Free Response on cmps112-2018q2-final.tt with accuracy 0.3384615384615385: 
+   Define the function factorial.  Note:  $ 0 ^ ! = 1 , ~ n ^ ! = n
+   times ( n - 1 ) ^ ! , $ and is undefined for negative numbers.
+
+    (a) Scheme.  Return #f for a negative number.  Deduct 1 point if
+        not tail recursive.  [2pt]
+
+        > (fac 15)      > (fac 0)
+        1307674368000   1
+        > (fac 10)      > (fac -1)
+        3628800         #f
+        > (fac 5)
+        120
+
+    (b) Ocaml.  Fail for a negative number.  Deduct 1 point if not
+        tail recursive.  [2pt]
+
+        # fac;;                   # fac 5;;
+        - : int -> int = <fun>    - : int = 120
+        # fac 15;;                # fac 0;;
+        - : int = 1307674368000   - : int = 1
+        # fac 10;;                # fac (-1);;
+        - : int = 3628800         Exception: Failure
+                                  "fac n | n < 0".
+
+    (c) Smalltalk.  Extend class Number to add a unary message fac.
+        Return nil if negative.  [2pt]
+
+        st> 15 fac.     st> 0 fac.
+        1307674368000   1
+        st> 10 fac.     st> -1 fac.
+        3628800         nil
+        st> 5 fac.
+        120
+
+    (d) Prolog.  Fail if negative.  [2pt]
+
+        | ?- fac(15,M).        | ?- fac(5,M).
+        M = 1307674368000 ?    M = 120 ?
+        yes                    yes
+        | ?- fac(10,M).        | ?- fac(0,M).
+        M = 3628800 ?          M = 1 ?
+        yes                    yes
+                               | ?- fac(-1,M).
+                               no
+
+
+
+Question 2 on Free Response on cmps112-2018q2-final.tt with accuracy 0.26666666666666666: 
+   Prolog.
+
+   (a) Define sum.  [1pt]           (b) Define length.  [1pt]
+      | ?- sum([1,2,3,4,5],N).         | ?- length([1,2,3,4,5],N).
+      N = 15                           N = 5
+      | ?- sum([],N).                  | ?- length([],N).
+      N = 0                            N = 0
+
+
+
+Question 3 on Free Response on cmps112-2018q2-final.tt with accuracy 0.4785714285714286: 
+   Write a function that performs differentiation of a polynomial.
+   For each term of the form $ k x sup n $, replace the term with the
+   value $ k n x sup { n - 1 } $.  Any term with an exponent of 0 is
+   lost.  Assume all input exponents are non-negative integers.  Exam-
+   ples:  $ size 8 { d over dx } ~ 4 x sup 4 + 6 x sup 3 + 7 x sup 2 +
+   5 x + 8 ~ = ~ 16 x sup 3 + 18 x sup 2 + 14 x + 5 $  and  $ size 8 {
+   d over dx } ~ 4 x sup 6 + 8 x sup 3 ~ = ~ 24 x sup 5 + 24 x sup 2 $
+
+    (a) Ocaml.  Represent a polynomial as a (float*int) list, where
+        each float is the coefficient and each int is the correspond-
+        ing exponent.  [2pt]
+
+        # differentiate;;
+        - : (float*int) list ->
+        (float*int) list = <fun>
+        # differentiate
+        [(4.,4);(6.,3);(7.,2);(5.,1);(8.,0)];;
+        - : (float*int) list =
+        [(16.,3);(18.,2);(14.,1);(5.,0)]
+        # differentiate [(4.,6);(8.,3)];;
+        - : (float*int) list = [(24.,5);(24.,2)]
+
+    (b) Scheme.  Represent a polynomial as a list of lists of length
+
+
+Question 4 on Free Response on cmps112-2018q2-final.tt with accuracy 0.5: 
+    (See the examples.)  The car of each sublist is the coef-
+        ficient and the cdr is the exponent.  Use a let to give mean-
+        ingful names to the caar, cadar, and cdr of the input list.
+        [3pt]
+
+        > (differentiate '((4 4)(6 3)(7 2)(5 1)(8 0)))
+        ((16 3)(18 2)(14 1)(5 0))
+        > (differentiate '((4 6)(8 3)))
+        ((24 5)(24 2))
+
+
+
+Question 5 on Free Response on cmps112-2018q2-final.tt with accuracy 0.5294117647058824: 
+   Java.  Write a class counter such that might be used in the ob-
+   servers and reporters problem.  It has a private long field to rep-
+   resent a count, which has an initial value of 0.  The method click
+   increments the count.  The method reset returns the current count
+   and resets it to 0.  Be sure that race conditions are not possible
+   when its methods are called from multiple concurrent threads.
+   [3pt]
+
+
+
+Question 6 on Free Response on cmps112-2018q2-final.tt with accuracy 0.625: 
+   Ocaml.  Define merge that takes a comparison function and two sort-
+   ed lists and returns a list merged into sorted order.  [2pt]
+   # merge;;
+   - : ('a -> 'a -> bool) -> 'a list -> 'a list -> 'a list = <fun>
+   # merge (<) [1;3;5;7;9] [2;4;6;8];;
+   - : int list = [1; 2; 3; 4; 5; 6; 7; 8; 9]
+   # merge (>) [99;88;77] [95;85;76];;
+   - : int list = [99; 95; 88; 85; 77; 76]
+   # merge (<) [1;2;3;4] [1;2;3;4];;
+   - : int list = [1; 1; 2; 2; 3; 3; 4; 4]
+
+
+
+Question 7 on Free Response on cmps112-2018q2-final.tt with accuracy 0.7130434782608696: 
+   Prolog.
+
+    (a) Write a set of facts called arrow which describe this graph,
+        where arrow(a,b) means that a->b.  [2pt]
+
+.PS 1i
+arrowht = circlerad
+arrowwid = circlerad/2
+A: circle "a"
+B: circle "b" at A+(5*circlerad,0)
+arrow from A to B chop
+C: circle "c" at A+(0,-5*circlerad)
+arrow from B to C chop
+arrow from A to C chop
+D: circle "d" at B+(5*circlerad,0)
+arrow from B to D chop
+E: circle "e" at D+(0,-5*circlerad)
+arrow from D to E chop
+arrow from E to C chop
+.PE
+
+    (b) Given ispath as defined here, write the relation ispath(A,Vis-
+        ited,B) which succeeds if there is a path from A to B and
+        avoids infinite traversals around a loop.  Use Visited to keep
+        track of the nodes visited.  [2pt]
+        Assume these relations:
+           not(X) :- X,!,fail.
+           not(_).
+           ispath(A,A).
+           ispath(A,B) :- ispath(A,[],B).
+        Results:
+        | ?- ispath(a,e).   yes
+        | ?- ispath(c,e).   no
+        | ?- ispath(a,c).   yes
+        | ?- ispath(d,c).   yes
+
+
+
+Question 8 on Free Response on cmps112-2018q2-final.tt with accuracy 0.6176470588235294: 
+   Define the function contains which returns true or succeeds if the
+   first argument is in the list which is passed as its second argu-
+   ment.  Returns false or fails otherwise.  See the examples.  In all
+   cases, just use the equals (=) operator for comparison.
+
+    (a) Scheme.--[1pt]-------------+----+
+        |(contains 3 '(1 2 3 4 5)) | #t |
+        +--------------------------+----+
+        |(contains 3 '(4 5 6))     | #f |
+        +--------------------------+----+
+        |(contains 3 '())          | #f |
+        +--------------------------+----+
+    (b) Prolog.--[1pt]------------+-----+
+        |contains(3,[1,2,3,4,5]). | yes |
+        +-------------------------+-----+
+        |contains(3,[4,5,6]).     | no  |
+        +-------------------------+-----+
+        |contains(3,[]).          | no  |
+        +-------------------------+-----+
+    (c) Ocaml.--[1pt]-------------+------------------+
+        |contains 3 [1;2;3;4;5];; | - : bool = true  |
+        +-------------------------+------------------+
+        |contains 3 [4;5;6];;     | - : bool = false |
+        +-------------------------+------------------+
+        |contains 3 [];;          | - : bool = false |
+        +-------------------------+------------------+
+
+
+Question 9 on Free Response on cmps112-2018q2-final.tt with accuracy 0.35294117647058826: 
+   Smalltalk.  Finish the following definition of class Stack.  Write
+   the methods push, pop, and isempty.  [3pt]
+
+   Object subclass: Stack [
+      |array top|
+      Stack class >> new: size [
+         ^ super new init: size
+      ]
+      init: size [
+         top := 0.
+         array := Array new: size.
+      ]
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.3888888888888889: 
+    What Java keyword is used to ensure that a method does not allow
+    race conditions?
+    (A) mutex
+    (B) protected
+    (C) runnable
+    (D) synchronized
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.4117647058823529: 
+    What interface should be implemented by a class object that should
+    support multiple threads?
+    (A) Iterable
+    (B) Runnable
+    (C) Synchronable
+    (D) Thread
+
+
+
+Question 3 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.5: 
+    How many times will the following for-loop be executed?  for (i =
+    1; i <= 100; i <<= 1);
+    (A)   1
+    (B)   7
+    (C)   8
+    (D) 100
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.7692307692307693: 
+    Type of [(1,"a");(2,"b");(3,"c")]
+    (A) (int * int * int) list
+        * (string * string * string) list
+    (B) (int * string) list list
+    (C) (int * string) list
+    (D) int list * string list
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.7857142857142857: 
+    What will cause a list with no elements to be passed to the
+    function f?
+    (A) (f '())
+    (B) (f ())
+    (C) (f null)
+    (D) (f null?)
+
+
+
+Question 7 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.42105263157894735: 
+    Perl, Scheme, and Prolog are languages whose type checking is:
+    (A) strong and dynamic
+    (B) strong and static
+    (C) weak and dynamic
+    (D) weak and static
+
+
+
+Question 8 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.9285714285714286: 
+    Ocaml.  Type of (+)
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 9 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.625: 
+    If guess will search a database for a possible answer and verify
+    checks to see if it is acceptable, how would this be coded in
+    Prolog?
+    (A) find(X) :- guess(X), verify(X).
+    (B) find(X) :- guess(X).
+        find(X) :- verify(X).
+    (C) find(X) :- verify(X), guess(X).
+    (D) verify(X) :- find(X), guess(X).
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.3181818181818182: 
+    If M = memory leak, and D = dangling references, which is possible
+    in Java?
+    (A) D but not M
+    (B) M but not D
+    (C) both of them
+    (D) neither
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.25: 
+    Scheme.  What will return 2?
+    (A) (if "" 1 2)
+    (B) (if #\0 1 2)
+    (C) (if #f 1 2)
+    (D) (if 0 1 2)
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.25: 
+    Ocaml.  What is 7?
+    (A) (+) (3, 4);;
+    (B) (+) 3 4;;
+    (C) (+) 3, 4;;
+    (D) 3 (+) 4;;
+
+                      +-----------------------+
+                      |                       |
+                      |                       |
+                      |                       |
+                      |                       |
+                      |                       |
+                      |jpgs/bug-zero.ps       |
+                      |                       |
+                      |                       |
+                      |                       |
+                      |                       |
+                      |                       |
+                      +-----------------------+
+Virginia.ehNaval9SurfaceuWarfaretCentermComputerlMuseumgatgDahlgren,,r
+
+
+
+
+Question 1 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.3076923076923077: 
+    Which is generally considered to be a scripting language?
+    (A) Algol 60
+    (B) Haskell
+    (C) OpenGL
+    (D) Perl
+
+
+
+Question 2 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.6666666666666666: 
+    Which function must be written using tail recursion?
+    (A) filter
+    (B) fold_left
+    (C) fold_right
+    (D) map
+
+
+
+Question 3 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.48148148148148145: 
+    A garbage collector finds heap objects by finding all objects:
+    (A) in the closure of the root set
+    (B) in the static data area
+    (C) that are dead
+    (D) that are live
+
+
+
+Question 4 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.42857142857142855: 
+    Which C, C++, and Java operator uses applicative order evaluation?
+    (A) &&
+    (B) ==
+    (C) ? :
+    (D) ||
+
+
+
+Question 5 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.7272727272727273: 
+    Given this Smalltalk definition, what returns 4?  a := [:x| x +
+    1].
+    (A) 3 a.
+    (B) a 3.
+    (C) a at: 3.
+    (D) a value: 3.
+
+
+
+Question 6 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.5: 
+    Which can be a fact in a Prolog database?
+    (A) foo(BAR,BAZ).
+    (B) foo(BAR,baz).
+    (C) foo(bar,BAZ).
+    (D) foo(bar,baz).
+
+
+
+Question 7 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.46153846153846156: 
+    What is used to pass an unevaluated expression in Haskell?
+    (A) block
+    (B) closure
+    (C) monad
+    (D) thunk
+
+
+
+Question 8 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.5081967213114754: 
+    A closure is:
+    (A) A special field of a structure or class used to point at a
+        base class when implementing shared multiple inheritance.
+    (B) A special type declaration in Ocaml used to distinguish sum
+        types from product types.
+    (C) A structure on the heap, used to hold variables of an outer
+        function when referenced by an inner function.
+    (D) A table used to dynamically dispatch virtual functions in an
+        object-oriented environment.
+
+
+
+Question 9 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.75: 
+    Ocaml.  let f x = x /. 2.;;
+    (A) val f : float -> float = <fun>
+    (B) val f : float -> int = <fun>
+    (C) val f : int -> float = <fun>
+    (D) val f : int -> int = <fun>
+
+
+
+Question 10 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.46153846153846156: 
+    Which languages uses unification to determine the values of
+    variables?
+    (A) Ocaml
+    (B) Prolog
+    (C) Scheme
+    (D) Smalltalk
+
+
+
+Question 11 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.625: 
+    In C++, the statement p->f(x,y);  will be translated into C as:
+    (A) p->f(p,x,y);
+    (B) p->f(x,y);
+    (C) p->vft->f(p,x,y);
+    (D) p->vft->f(x,y);
+
+
+
+Question 12 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.6428571428571429: 
+    Is half of two plus two equal to two or three?
+    (A) two
+    (B) three
+    (C) yes
+    (D) no
+
+                           +-------------+
+                           |             |
+                           |             |
+                           |             |
+                           |jpgs/haskellwiki-logo-big.ps
+                           |             |
+                           |             |
+                           |             |
+                           |             |
+                           +-------------+
+
+
+
+
+Question 1 on Free Response on cmps112-2018q4-final.tt with accuracy 0.30344827586206896: 
+   Define gcd which uses Euclid's algorithm to find the greatest com-
+   mon divisor for two integers $x > 0$ and $y > 0$.
+   Mathematically:  $ roman gcd ( 111 , 259 ) = roman gcd ( 111 , 148
+   ) = roman gcd ( 111 , 37 ) = roman gcd ( 74 , 37 ) = roman gcd ( 37
+   , 37 ) = 37 $.
+   Translate the C version and be consistent with the examples.
+      int gcd (int x, int y) {
+         while (x != y) if (x > y) x -= y; else y -= x;
+         return x;
+      }
+
+    (a) Scheme.  Use cond for selection.  [2pt]
+        > (gcd 111 259)
+        37
+        > (gcd 11 9)
+        1
+
+    (b) Ocaml.  [2pt]
+        # gcd;;
+        - : int -> int -> int = <fun>
+        # gcd 111 259;;
+        - : int = 37
+        # gcd 11 9;;
+        - : int = 1
+
+    (c) Prolog.  [2pt]
+        | ?- gcd( 111, 259, E).
+        E = 37 ?
+        yes
+        | ?- gcd( 11, 9, E).
+        E = 1 ?
+        yes
+
+    (d) Perl.  Prototype the function.  [2pt]
+        print gcd (111, 259), "\n";
+        37
+        print gcd (11, 9), "\n";
+        1
+
+    (e) Smalltalk.  Extend class Integer with a keyword method gcd:.
+        [2pt]
+        st> 111 gcd: 259.
+        37
+        st> 11 gcd: 9.
+        1
+
+
+
+Question 2 on Free Response on cmps112-2018q4-final.tt with accuracy 0.6511627906976745: 
+   Bash.  Write a script which will run the file hzip.st on a sequence
+   of files in the current directory all of which match *.in and put
+   the compressed files in files ending in *.in.zipped.  Example:
+   foo.in will be zipped into foo.in.zipped.  (Reminder:  the -c op-
+   tion is used for compression.)  [2pt]
+
+
+
+Question 3 on Free Response on cmps112-2018q4-final.tt with accuracy 0.5: 
+   Code a linear search through a data structure, given a comparison
+   function and a key.  The data structure contains paired keys and
+   values.  Return the value associated with the first key that match-
+   es.  The examples show what is expected in various cases.
+
+    (a) Ocaml.  [2pt]
+        # find (=) 3 [1,2;3,4;5,6];;
+        - : int option = Some 4
+        # find (=) 9 [0,1;2,3;4,5];;
+        - : int option = None
+        # find (<) 8 [9,2;7,3;5,9];;
+        - : int option = Some 2
+
+    (b) Scheme.  [2pt]
+        > (find = 3 '((1 2)(3 4)(5 6)))
+        4
+        > (find = 9 '((0 1)(2 3)(4 5)))
+        #f
+        > (find < 8 '((2 2)(9 3)(9 9)))
+        3
+
+    (c) Prolog.  Use unification to determine equality.  [2pt]
+        | ?- find( 3, [pair(1,2),pair(3,4),pair(5,6)], V).
+        V = 4 ?
+        yes
+        | ?- find( 9, [pair(0,1),pair(2,3),pair(4,5)], V).
+        no
+
+
+
+Question 4 on Free Response on cmps112-2018q4-final.tt with accuracy 0.5423728813559322: 
+   Smalltalk.  Extend class Array with a keyword method innerprod
+   which computes the inner product of two arrays.  If the sizes of
+   the two arrays are the same, return the inner product.  If not, in-
+   dicate an error with the statement:  ^ self error: 'innerprod dif-
+   ferent sizes'.  [2pt]
+   Mathematically, the inner product $p$ of two arrays $a$ and $b$ is:
+   $ p = sum from i {a sub i} {b sub i} $
+
+
+
+Question 5 on Free Response on cmps112-2018q4-final.tt with accuracy 0.6052631578947368: 
+   Perl.  Write a program that reads in numbers from the files speci-
+   fied on the command line, or from the standard input if no files
+   are specified.  Scan each line for numbers, and at end of file,
+   print the sum of all the numbers on the line.  A number is any se-
+   quence of decimal digits, with no decimal point or exponents.  Any
+   non-digit charcters are ignored.  [2pt]
+   -bash-92$ cat /tmp/num
+   33 44 55
+   838
+   100 3
+   -bash-93$ ./count.perl /tmp/num /tmp/num
+   2146
+   -bash-94$ echo 44 55 | ./count.perl
+   99
+
+
+
+Question 6 on Free Response on cmps112-2018q4-final.tt with accuracy 0.3333333333333333: 
+   Prolog.  Reverse a list.  [1pt]
+   | ?- reverse([1,2,3,4],L).
+   L = [4,3,2,1]
+   yes
+
+
+
+Question 7 on Free Response on cmps112-2018q4-final.tt with accuracy 0.5806451612903226: 
+   Bash.  One command using a pipe that lists all of the files in the
+   current directory in long mode, but prints only those files which
+   were modified in the year 2016.  [1pt]
+
+
+
+Question 8 on Free Response on cmps112-2018q4-final.tt with accuracy 0.5555555555555556: 
+   Prolog.  Split a list of numbers into the positive list and the
+   negative list.  [2pt]
+   | ?- posneg([1,3,-6,0,32,-44,8,0,77],P,N).
+   N = [-6,-44]
+   P = [1,3,32,8,77]
+   | ?- posneg([-3,-5,7,10,0,0,0,44,-2],P,N).
+   N = [-3,-5,-2]
+   P = [7,10,44]
+
+
+
+Question 9 on Free Response on cmps112-2018q4-final.tt with accuracy 0.3880597014925373: 
+   Scheme.  Define eval whose argument is either a number or an arith-
+   metic expression.  An arithmetic expression is an operator followed
+   by to expressions.  This definition is recursive and expressions
+   may be nested arbitrarily deeply.  Assume all expressions are well-
+   formed, so do not do any error checking.  [2pt]
+   > (eval 3)
+   3
+   > (eval (+ 3 4))
+   7
+   > (eval (+ (* 3 4) (* 5 6)))
+   42
+   > (eval (+ (* 3 4) (/ (+ 8 2) (- 7 6))))
+   22
+
+
+
+Question 10 on Free Response on cmps112-2018q4-final.tt with accuracy 0.66: 
+    Smalltalk.  Extend class Array with the keyword message contains:
+   which accepts a block with one argument as a predicate.  Return
+   true if any element of the array, when sent to the predicate via
+   the value: message return true.  [2pt]
+   st> #(1 3 4 5) contains: [:i|i=3].
+   true
+   st> #(1 3 4 5) contains: [:i|i=0].
+   false
+   st> #() contains: [:i|i=3].
+   false
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.125: 
+    What makes the script hzip.st executable?
+    (A) chmod +x hzip.st
+    (B) chmod -x hzip.st
+    (C) chmod hzip.st +x
+    (D) chmod hzip.st -x
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.8333333333333334: 
+    Which system call is used to find the modification time of a file?
+    (A) ls(1)
+    (B) readlink(2)
+    (C) stat(2)
+    (D) time(2)
+
+
+
+Question 3 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.35294117647058826: 
+    Which of these languages uses normal order evaluation by default,
+    rather than applicative order evaluation?
+    (A) Haskell
+    (B) Ocaml
+    (C) Prolog
+    (D) Scheme
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.3333333333333333: 
+    Which C, C++, Java operator uses applicative (not normal) order
+    evaulation?
+    (A) &&
+    (B) <<
+    (C) ? :
+    (D) ||
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.6521739130434783: 
+    What is the type of f in the declaration:
+    let f (x, y) = x +. y;;
+    (A) float * float -> float
+    (B) float -> float -> float
+    (C) int * int -> int
+    (D) int -> int -> int
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.5: 
+    Lisp, Scheme, and similar languages use ideas derived from:
+    (A) \alpha-calculus
+    (B) \beta-calculus
+    (C) \lambda-calculus
+    (D) \eta-calculus
+
+
+
+Question 7 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.6842105263157895: 
+    Smalltalk.  Operator precedence with the highest at the left and
+    lowest at the right is:
+    (A) binary, keyword, unary
+    (B) binary, unary, keyword
+    (C) keyword, binary, unary
+    (D) keyword, unary, binary
+    (E) unary, binary, keyword
+    (F) unary, keyword, binary
+
+
+
+Question 8 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.4857142857142857: 
+    Ocaml.  The function List.fold_left on a list of length $n$ takes:
+    (A) $ O ( 1 ) $ stack and $ O ( 1 ) $ time
+    (B) $ O ( 1 ) $ stack and $ O ( n ) $ time
+    (C) $ O ( n ) $ stack and $ O ( 1 ) $ time
+    (D) $ O ( n ) $ stack and $ O ( n ) $ time
+
+
+
+Question 9 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.4857142857142857: 
+    Ocaml.  The function List.fold_right on a list of length $n$
+    takes:
+    (A) $ O ( 1 ) $ stack and $ O ( 1 ) $ time
+    (B) $ O ( 1 ) $ stack and $ O ( n ) $ time
+    (C) $ O ( n ) $ stack and $ O ( 1 ) $ time
+    (D) $ O ( n ) $ stack and $ O ( n ) $ time
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.36363636363636365: 
+    What is used to allow multiple concurrent sequences of
+    instructions in a program such that shared variables require
+    synchronization?
+    (A) kernel
+    (B) process
+    (C) thread
+    (D) vector
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.2857142857142857: 
+    Perl.  What is a comment?
+    (A) # comment
+    (B) /* comment */
+    (C) // comment
+    (D) (* comment *)
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.52: 
+    Smalltalk.  What is used to dynamically add new methods to class
+    Integer?  (Assume that $...$ represents some valid code.)
+    (A) Integer extend [ $...$ ].
+    (B) class Integer: Object [ $...$ ].
+    (C) extend class Integer with [ $...$ ].
+    (D) interface extends Integer [ $...$ ].
+                      +-----------------------------+
+                      |                             |
+                      |                             |
+                      |                             |
+                      |                             |
+                      |                             |
+                      |jpgs/duck-typing-2.ps        |
+                      |                             |
+                      |                             |
+                      |                             |
+                      |                             |
+                      |                             |
+                      +-----------------------------+
+
+
+
+
+Question 1 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.2857142857142857: 
+    Which language is purely object-oriented?
+    (A) C++
+    (B) Java
+    (C) Ocaml
+    (D) Smalltalk
+
+
+
+Question 2 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.5: 
+    What regular expression will match one or more white-space
+    characters?
+    (A) \S+
+    (B) \W+
+    (C) \s+
+    (D) \w+
+
+
+
+Question 3 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.7777777777777778: 
+    What is the first line of a Perl script?
+    (A) !#/usr/bin/perl
+    (B) #!/bin/bash perl
+    (C) #!/usr/bin/perl
+    (D) #!\usr\bin\perl
+
+
+
+Question 4 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.9230769230769231: 
+    Perl.  Which expression will find the value associated with the
+    key $i$ in the hash $a$?
+    (A) $a($i)
+    (B) $a<$i>
+    (C) $a[$i]
+    (D) $a{$i}
+
+
+
+Question 5 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.3: 
+    Which of these languages is compiled (not interpreted)?
+    (A) Ocaml
+    (B) Perl
+    (C) Prolog
+    (D) Smalltalk
+
+
+
+Question 6 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.8333333333333334: 
+    Perl.  Which of the following is an array?
+    (A) $a
+    (B) %a
+    (C) *a
+    (D) @a
+
+
+
+Question 7 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.6551724137931034: 
+    Which of the following Makefiles will compile an arbitrary C
+    program when given the name of the executable binary as an operand
+    to make?
+    Example:  make foo
+    (A) %.c: %
+                gcc $@ -o $$
+    (B) %: %.c
+                gcc $< -o $@
+    (C) %: %.c
+                gcc %.c
+    (D) *: *.c
+                gcc $< >$@
+
+
+
+Question 8 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.7222222222222222: 
+    What will redirect both the stdout and stderr of program foo into
+    the file bar?
+    (A) foo 1>&2 >bar
+    (B) foo 2>&1 >bar
+    (C) foo >bar 1>&2
+    (D) foo >bar 2>&1
+
+
+
+Question 9 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.1794871794871795: 
+    Haskell.  Define filter so that
+    Prelude> filter (>0) [1,3,-2,-8,7]
+    [1,3,7]
+    (A) let filter p z = match z with [] -> []
+        | x::xs -> filter p xs;;
+    (B) let filter p z = [x <- z | x > 0]
+    (C) let filter p z = [x | x <- z, p x]
+    (D) let filter p z = if null p x then []
+        else p cdr z
+
+
+
+Question 10 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.6585365853658537: 
+    Perl.  What will read the next line from the standard input if no
+    files are specified in @ARGV, but if files are specified in @ARGV,
+    will read the next line from the current file, sequencing through
+    these files in the order given?
+    (A) while ($line = <*>)
+    (B) while ($line = <>)
+    (C) while ($line = <@ARGV>)
+    (D) while ($line = <STDIN>)
+
+
+
+Question 11 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 1.0: 
+    Ocaml.  # (=);;
+    (A) - : 'a * 'a -> bool = <fun>
+    (B) - : 'a -> 'a -> bool = <fun>
+    (C) - : int * int -> bool = <fun>
+    (D) - : int -> int -> bool = <fun>
+
+
+
+Question 12 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.4375: 
+    Templates in C++ and generics in Java are an example of __
+    polymorphism.
+    (A) ad-hoc parametric
+    (B) universal ad-hoc
+    (C) universal conversion
+    (D) universal parametric
+
+
+
+
+Question 1 on Free Response on cmps112-2019q1-final.tt with accuracy 0.896551724137931: 
+   Ocaml.  Define the following functions.
+
+    (a) [2pt]
+        # map;;
+        - : ('a -> 'b) -> 'a list -> 'b list = <fun>
+
+    (b) [2pt]
+        # filter;;
+        - : ('a -> bool) -> 'a list -> 'a list = <fun>
+
+    (c) [2pt]
+        # fold_left;;
+        - : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a = <fun>
+
+
+
+Question 2 on Free Response on cmps112-2019q1-final.tt with accuracy 0.46875: 
+   Scheme.  Define the following functions.  Each has an example of a
+   call.
+
+    (a) [2pt]
+        > (map / '(1. 2. 3. 4. 5. 6.))
+        (1.0 0.5 0.3333333333333333 0.25 0.2 0.16666666666666666)
+
+    (b) [2pt]
+        > (filter (lambda (x) (> x 0)) '(1 2 -3 -4 5 -6))
+        (1 2 5)
+
+
+
+Question 3 on Free Response on cmps112-2019q1-final.tt with accuracy 0.5275229357798165: 
+   Code a linear search findpred, given a predicate and a sequence of
+   pairs, return the value associated with the first key that the
+   predicate matches.  Determine the not-found value from the exam-
+   ples.  Do not use any higher-order functions.  Follow the general
+   assumptions about the particular language for which the answer is
+   required.
+
+    (a) Smalltalk.  Extend class Array.  Search an array of arrays.
+        The inner arrays are all key and value pairs.  Return nil if
+        not found.  [2pt]
+        st> pos := [:x| x > 0].
+        st> two := [:x| x = 2].
+        st> a := #(#(-3 6) #(-9 8) #(10 100) #(2 20)).
+        st> b := #(#(1 2) #(3 4) #(5 6)).
+        st> a findpred: pos.
+        100
+        st> b findpred: two.
+        nil
+
+    (b) Perl.  Return undef if not found.  [2pt]
+        Source:
+        sub pos {$_[0]>0};
+        sub two {$_[0]==2};
+        sub show { my ($a) = @_;
+           print defined($a) ? "$a\n" : "NONE\n";
+        }
+        show findpred \&pos, ([-3,6],[-9,8],[4,7],[10,0]);
+        show findpred \&two, ([1,2],[3,4],[5,6]);
+        Output:
+        7
+        NONE
+
+    (c) Prolog.  The term call(P,K) will call P with the argument K.
+        [2pt]
+        Rules:
+        pos(X) :- X > 0.
+        two(X) :- X =:= 2.
+        Queries:
+        | ?- findpred(pos,
+        [pair(-3,6),pair(-9,8),pair(4,7),pair(10,0)], X).
+        X = 7 ? ;
+        X = 0 ? ;
+        no
+        | ?- findpred(two, [pair(1,2),pair(3,4),pair(5,6)], X).
+        no
+
+    (d) Ocaml.  [2pt]
+        # findpred;;
+        - : ('a -> bool) -> ('a * 'b) list -> 'b option = <fun>
+        # let pos x = x > 0;;
+        # let two x = x = 2;;
+        # findpred pos [-3,6;-9,8;4,7;10,0;2,20];;
+        - : int option = Some 7
+        # findpred two [1,2;3,4;5,6];;
+        - : int option = None
+
+    (e) Scheme.  The first argument to findpred is the value to be re-
+        turned if not found.  [2pt]
+        > (define (pos x) (> x 0))
+        > (define (two x) (= x 2))
+        > (findpred 9999 pos '((-3 6) (-9 8) (10 100) (2 20)))
+        100
+        > (findpred #f two '((1 2) (3 4) (5 6)))
+        #f
+
+
+
+Question 4 on Free Response on cmps112-2019q1-final.tt with accuracy 0.631578947368421: 
+   Make.  Write a complete Makefile that will compile an arbitrary Ja-
+   va program into the appropriate class file.  Assume the entire Java
+   program is contained in a single file.  For example, make foo.class
+   should build the class file using the command java foo.java.  Use
+   proper make variables so that any Java program can be compiled, not
+   just one called foo.  [1pt]
+
+
+
+Question 5 on Free Response on cmps112-2019q1-final.tt with accuracy 0.543859649122807: 
+   Without using any higher-order functions, define oddlen which de-
+   termines if a list has an odd number of elements or not.
+
+    (a) Ocaml.  [2pt]
+        # oddlen [];;
+        - : bool = false
+        # oddlen [1;2;3;4];;
+        - : bool = false
+        # oddlen [1;2;3;4;5];;
+        - : bool = true
+
+    (b) Scheme.  Use cond, not if.  [2pt]
+        > (oddlen '())
+        #f
+        > (oddlen '(1 2 3 4))
+        #f
+        > (oddlen '(1 2 3 4 5))
+        #t
+
+    (c) Prolog.  Succeeds or fails.  [1pt]
+        | ?- oddlen([]).
+        no
+        | ?- oddlen([1,2,3,4]).
+        no
+        | ?- oddlen([1,2,3,4,5]).
+        true ? ;
+        no
+
+
+
+Question 6 on Free Response on cmps112-2019q1-final.tt with accuracy 0.5466666666666666: 
+   Smalltalk.  Define classes Animal, Cat, and Dog.
+    (a) Class Animal has an instance field called name.  Its class
+        method new: sets the name.  Its has instance methods setName,
+        which sets the name, and name which returns the name.  [3pt]
+    (b) Class Cat is a subclass of Animal and has an instance method
+        noise which returns the string 'meow'.
+        Class Dog is a subclass of Animal and has an instance method
+        noise which returns the string 'woof'.  [1pt]
+
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.46153846153846156: 
+    Make.  What wildcard dependency might be used to specify how to
+    compile a C program?
+    (A) %.c: %.o
+    (B) %.o: %.c
+    (C) *.c: *.o
+    (D) *.o: *.c
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.9090909090909091: 
+    Perl.  What will print foo?
+    (A) print "foo" if 0;
+    (B) print "foo" if FALSE;
+    (C) print "foo" if "";
+    (D) print "foo" if undef;
+
+
+
+Question 3 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.3333333333333333: 
+    Ocaml.  What kind of polymorphism is represented by:
+    # List.length;;
+    - : 'a list -> int = <fun>
+    (A) conversion
+    (B) inclusion
+    (C) overloading
+    (D) parametric
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.42857142857142855: 
+    Ocaml.  What term could be used to describe the function (+)?
+    (A) curried
+    (B) dynamically typed
+    (C) overloaded
+    (D) polymorphic
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.5555555555555556: 
+    Perl.  The first line of a script.
+    (A) #!/usr/bin/perl
+    (B) (*/usr/bin/perl*)
+    (C) //GO.SYSIN DD PERL
+    (D) chmod ugo+x perl
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.26666666666666666: 
+    Normal order evaluation is also known as:
+    (A) dynamic dispatch
+    (B) interpretive execution
+    (C) lazy evaluation
+    (D) pass by reference
+
+
+
+Question 7 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.5098039215686274: 
+    Smalltalk.  What is the order of evaluation of messages, listed in
+    order with highest precedence at the left to lowest precedence at
+    the right?
+    (A) binary then keyword then unary
+    (B) binary then unary then keyword
+    (C) keyword then binary then unary
+    (D) keyword then unary then binary
+    (E) unary then binary then keyword
+    (F) unary then keyword then binary
+
+
+
+Question 8 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.4482758620689655: 
+    Smalltalk.  What is the value of an uninitialized variable?
+    (A) nil
+    (B) nullptr
+    (C) undef
+    (D) There is no way of knowing because it depends on whatever
+        random bits happen to be in that memory location.
+
+
+
+Question 9 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.2: 
+    Java.  What kind of polymorphism is this?
+    interface foo {
+       void bar (int x);
+       void bar (String x);
+    }
+    (A) conversion
+    (B) inclusion
+    (C) overloading
+    (D) parametric
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.7222222222222222: 
+    Bash.  What will run the program foo, redirect both its stdout and
+    stderr to the file bar?
+    (A) foo <bar 1>&2
+    (B) foo <bar 2>&1
+    (C) foo >bar 1>&2
+    (D) foo >bar 2>&1
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.46153846153846156: 
+    Bash.  What shell variable had to be exported via your profile in
+    order to make access the the binaries of the various languages
+    convenient?
+    (A) BINDIR
+    (B) PATH
+    (C) SHELL
+    (D) USER
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.6: 
+    What Java and C++ statement is eqivalent to Fortran's and PL/1's
+    non-local goto, which is able to transfer control from one
+    function into the calling context of the function that called it?
+    (A) break
+    (B) catch
+    (C) continue
+    (D) throw
+
+
+
+
+Question 1 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.4375: 
+    Perl.  If a child process is terminated by a signal, what is the
+    signal number?
+    (A) $? & 127
+    (B) $? << 8
+    (C) $? >> 8
+    (D) $? | 127
+
+
+
+Question 2 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.3333333333333333: 
+    Perl.  What is the exit status of a child process?
+    (A) $? & 127
+    (B) $? << 8
+    (C) $? >> 8
+    (D) $? | 127
+
+
+
+Question 3 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.5862068965517241: 
+    Ocaml.  How much stack space is used by List.fold_left, where $n$
+    is the length of the list argument?
+    (A) $ O ( 1 ) $
+    (B) $ O ( log sub 2 n ) $
+    (C) $ O ( n ) $
+    (D) $ O ( n log sub 2 n ) $
+
+
+
+Question 4 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.5862068965517241: 
+    Ocaml.  How much stack space is used by List.fold_right, where $n$
+    is the length of the list argument?
+    (A) $ O ( 1 ) $
+    (B) $ O ( log sub 2 n ) $
+    (C) $ O ( n ) $
+    (D) $ O ( n log sub 2 n ) $
+
+
+
+Question 5 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 1.0: 
+    Ocaml.  List.map
+    (A) ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a
+    (B) ('a -> 'b -> 'b) -> 'a list -> 'b -> 'b
+    (C) ('a -> 'b) -> 'a list -> 'b list
+    (D) ('a -> bool) -> 'a list -> 'a list
+
+
+
+Question 6 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.2222222222222222: 
+    What language uses ``duck typing''?
+    (A) Java
+    (B) Ocaml
+    (C) Perl
+    (D) Prolog
+    (E) Scheme
+    (F) Smalltalk
+
+
+
+Question 7 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.36363636363636365: 
+    What language uses normal order evaluation by default?
+    (A) Fortran
+    (B) Haskell
+    (C) Ocaml
+    (D) Prolog
+
+
+
+Question 8 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.7272727272727273: 
+    Perl.  What is used to extract an element using $key from a hash
+    %hash?
+    (A) %hash[$key]
+    (B) %hash{$key}
+    (C) $hash[$key]
+    (D) $hash{$key}
+
+
+
+Question 9 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.1: 
+    Scheme.  What is 24?
+    (A) (apply '* '(1 2 3 4))
+    (B) (apply '* (1 2 3 4))
+    (C) (apply * '(1 2 3 4))
+    (D) (apply * (1 2 3 4))
+
+
+
+Question 10 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.75: 
+    Ocaml.  What is an int list?
+    (A) (1,2,3,4)
+    (B) (1;2;3;4)
+    (C) [1,2,3,4]
+    (D) [1;2;3;4]
+
+
+
+Question 11 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.3333333333333333: 
+    Ocaml.  What is float = infinity?
+    (A) 0./.0.
+    (B) 0./.1.
+    (C) 1./.0.
+    (D) 1./.1.
+
+
+
+Question 12 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.23809523809523808: 
+    Languages/prolog/Examples/einstein.pl
+    The ______ owns the fish.
+    (This example was discussed during lecture, so you might have
+    remembered this had you attended lecture.)
+    (A) brit
+    (B) dane
+    (C) german
+    (D) norwegian
+    (E) swede
+
+                    +-----------------------------+
+                    |                             |
+                    |                             |
+                    |                             |
+                    |                             |
+                    |                             |
+                    |                             |
+                    |jpgs/albert-einstein-head.ps |
+                    |                             |
+                    |                             |
+                    |                             |
+                    |                             |
+                    |                             |
+                    |                             |
+                    +-----------------------------+
+
+
+
+

@@ -1,0 +1,598 @@
+Matching questions with at least 0.7 in common.
+
+Question 1 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.7142857142857143: 
+   Ocaml.
+
+    (a) Define sum without using any higher-order functions.  [2pt]
+
+        sum : int list -> int = <fun>
+        # sum [1;2;3;4;5];;
+        - : int = 15
+
+    (b) Define fold_left.  [2pt]
+
+        val fold_left : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a =
+        <fun>
+
+    (c) Define sumf which uses a \beta-reduced form of calling fold_
+        left.  [1pt]
+
+        let sumf = fold_left
+        ________________________________________;;
+        val sumf : int list -> int = <fun>
+
+
+
+Question 8 on Free Response on cmps112-2017q4-midterm.tt with accuracy 0.75: 
+   Ocaml.  Write a function to reverse a list.  [2pt]
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.9285714285714286: 
+    Type of (+)?
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 12 on Multiple Choice part 1 on cmps112-2017q4-midterm.tt with accuracy 0.7272727272727273: 
+    In the expression $ ( \lambda x . ( + x ) y ) $
+    (A) $x$ is bound and $y$ is bound.
+    (B) $x$ is bound and $y$ is free.
+    (C) $x$ is free and $y$ is bound.
+    (D) $x$ is free and $y$ is free.
+
++---------------------------------+
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|jpgs/math-but-yesterday-you-said.ps
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
+|                                 |
++---------------------------------+
+
+
+
+
+Question 5 on Free Response on cmps112-2018q1-midterm.tt with accuracy 0.7959183673469388: 
+   Ocaml.  Define merge which takes a comparison function and two
+   sorted lists and merges the two lists into a single sorted list.
+   [3pt]
+   # merge;;
+   - : ('a -> 'a -> bool) -> 'a list -> 'a list -> 'a list = <fun>
+   # merge (>) [9;5;1] [4;8;2];;
+   - : int list = [9; 5; 4; 8; 2; 1]
+   # merge (<) [1;5;9] [2;4;7];;
+   - : int list = [1; 2; 4; 5; 7; 9]
+   # merge (<) [] [];;
+   - : 'a list = []
+
+
+
+Question 7 on Free Response on cmps112-2018q1-midterm.tt with accuracy 0.7407407407407407: 
+   Ocaml.  Define sub' according to the programming project.  It takes
+   two int lists representing multiprecise numbers and subtracts the
+   second from the first.  Assume the first number is not less than
+   the second number.  [5pt]
+   # sub';;
+   - : int list -> int list -> int list = <fun>
+   # sub' [1;2;3;4] [4;3;2;1];;
+   - : int list = [7; 8; 0; 3]
+   # sub' [0;0;0;9] [2];;
+   - : int list = [8; 9; 9; 8]
+   # sub' [3;3;3] [3;3;3];;
+   - : int list = []
+
+
+
+
+Question 3 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.9230769230769231: 
+    Output of:
+    # (-);;
+    (A) - : int * int * int = <fun>
+    (B) - : int * int -> int = <fun>
+    (C) - : int -> int * int = <fun>
+    (D) - : int -> int -> int = <fun>
+
+
+
+Question 11 on Multiple Choice part 2 on cmps112-2018q1-midterm.tt with accuracy 0.8333333333333334: 
+    What produces x itself as a result of this expression, assuming x
+    is a list of at least one element?
+    (A) (cons (car x) (cdr x))
+    (B) (cons (cdr x) (car x))
+    (C) (list (car x) (cdr x))
+    (D) (list (cdr x) (car x))
+
+
+
+Question 9 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.7301587301587301: 
+   Define the function zipwith that takes a function and two lists and
+   uses that function to join the lists into a single result list.  If
+   the lists are of different length, use failwith to raise an excep-
+   tion.  Do not use the length function.  [2pt]
+   # zipwith;;
+   - : ('a -> 'b -> 'c) -> 'a list -> 'b list -> 'c list = <fun>
+   # zipwith (+) [1;2;3] [4;5;6];;
+   - : int list = [5; 7; 9]
+   # zipwith (/.) [1.;2.;3.] [4.;5.;6.];;
+   - : float list = [0.25; 0.4; 0.5]
+   # zipwith (+) [1;3;5] [4];;
+   Exception: Failure "zipwith".
+
+
+
+Question 11 on Free Response on cmps112-2018q2-midterm.tt with accuracy 0.7608695652173914: 
+    Define the function sum which returns the sum of a list of inte-
+   gers.  Use a higher-order function.
+    (a) Scheme.  [1pt]
+        > foldl
+        #<procedure:foldl>
+        (define (sum list) ___________________________________ )
+        > (sum '(1 2 3))
+        6
+    (b) Ocaml.  [1pt]
+        # let sum = List.fold_left ___________________________________
+        ;;
+        # List.fold_left;;
+        - : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a = <fun>
+        val sum : int list -> int = <fun>
+        # sum [1;2;3];;
+        - : int = 6
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.9444444444444444: 
+    What is the type of List.map((+)3)?
+    (A) (int -> int) -> int list -> int list
+    (B) int list -> (int -> int) list
+    (C) int list -> int list
+    (D) int list
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.9090909090909091: 
+    What is the type of (>)?
+    (A) 'a * 'a -> bool
+    (B) 'a -> 'a -> bool
+    (C) bool -> 'a -> 'a
+    (D) int -> int -> bool
+
+
+
+Question 9 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.7391304347826086: 
+    In the \lambda-calculus expression $ ( lambda x . ~ + ~ x ~ y ) $:
+    (A) $x$ is bound and $y$ is bound.
+    (B) $x$ is bound and $y$ is free.
+    (C) $x$ is free and $y$ is bound.
+    (D) $x$ is free and $y$ is free.
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.8823529411764706: 
+    What is tye type of (-)?
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2018q2-midterm.tt with accuracy 0.9166666666666666: 
+    What is the type of List.map?
+    (A) ('a -> 'b) -> 'a list -> 'b list
+    (B) ('a * 'b) * 'a list * 'b list
+    (C) 'a list -> 'b list -> ('a -> 'b)
+    (D) ('a list -> 'b list) -> 'a -> 'b
+
+
+
+Question 1 on Free Response on cmps112-2018q4-midterm.tt with accuracy 0.75: 
+   Smalltalk.  Write a program that prints the numbers 1 through 1000
+   inclusive, one number per line.  [1pt]
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.75: 
+    Unix.  What is the symbolic name for a user's home directory?
+    (A) $
+    (B) .
+    (C) /
+    (D) ~
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.7241379310344828: 
+    Which of the following will not be written using tail recursion?
+    (A) Computing a Fibonacci number.
+    (B) Finding the sum of all elements in a list.
+    (C) Mapping a unary function onto a list.
+    (D) Reversing a list.
+
+
+
+Question 11 on Multiple Choice part 1 on cmps112-2018q4-midterm.tt with accuracy 0.9411764705882353: 
+    Ocaml.  What is the type of (+)?
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 4 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.9411764705882353: 
+    Ocaml.  What is the type of (+)?
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.7586206896551724: 
+    What takes a function and a list, applies that function to every
+    element of the list, and returns a resulting list of the same
+    length as the argument list?
+    (A) apply
+    (B) fold_left
+    (C) filter
+    (D) map
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2019q1-midterm.tt with accuracy 0.8333333333333334: 
+    Assuming x is a proper list, what will return a list equivalent to
+    x?
+    (A) (car (cdr x) (cons x))
+    (B) (car (cons x) (cdr x))
+    (C) (cdr (car x) (cons x))
+    (D) (cdr (cons x) (car x))
+    (E) (cons (car x) (cdr x))
+    (F) (cons (cdr x) (car x))
+
+
+
+Question 1 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.7692307692307693: 
+   Define the function sum which will find the sum of all numbers in
+    a list.  Use as little function call stack space as possible.  Do
+    not use a higher order function.
+
+     (a) Scheme.  [2pt]
+
+     (b) OCaml.  [2pt]
+         # sum;;
+         - : int list -> int = <fun>
+
+
+
+Question 4 on Free Response on cse112-2020q1-midterm.tt with accuracy 0.782608695652174: 
+   Scheme.  Define the function evalexpr which takes as an argument
+    either a number or an expression.  A number is always returned as
+    real.  An expression is a list of length 3, where the car is a
+    binary function, and the cdr is a list of two expressions.  See
+    the Scheme interaction at the left.  Note that there is no hash
+    table for functions.  The actual function's value is in the list
+    in the function position.  Note the quasiquote and unquote.  [2pt]
+
+    +--------------------------------------------+
+    |> (evalexpr `(,+ (,* 2 3) (,* 4 5)))        |
+    |26.0                                        |
+    |> (evalexpr 3)                              |
+    |3.0                                         |
+    |> (evalexpr `(,* (,+ 8 3) (,+ (,* 2 9) 6))) |
+    |264.0                                       |
+    +--------------------------------------------+
+
+
+
+Question 2 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.8: 
+    OCaml.  Fill in the blank.
+   # ____ ((+)1) [1;2;3];;
+   - : int list = [2; 3; 4]
+   (A) List.fold_left
+   (B) List.fold_right
+   (C) List.map
+   (D) List.tl
+
+
+
+Question 8 on Multiple Choice part 1 on cse112-2020q1-midterm.tt with accuracy 0.9411764705882353: 
+    OCaml.  What is the type of ( * )?
+   (A) int * int -> int
+   (B) int * int <- int
+   (C) int -> int -> int
+   (D) int <- int <- int
+
+
+
+Question 1 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.9166666666666666: 
+    What is the type of f:
+    let f (x, y) = x + y;;
+    (A) f : int * int * int
+    (B) f : int * int -> int
+    (C) f : int -> int * int
+    (D) f : int -> int -> int
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.8461538461538461: 
+    What is the type of g:
+    let g x y = x * y;;
+    (A) f : int * int * int
+    (B) f : int * int -> int
+    (C) f : int -> int * int
+    (D) f : int -> int -> int
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2017q4-final.tt with accuracy 0.8333333333333334: 
+    What has type int list in Ocaml?
+    (A) (1,2,3,4);;
+    (B) (1;2;3;4);;
+    (C) [1,2,3,4];;
+    (D) [1;2;3;4];;
+
+
+
+Question 9 on Multiple Choice part 2 on cmps112-2017q4-final.tt with accuracy 0.8333333333333334: 
+    Given the following Smalltalk definition, what returns 4?
+    a := [:x| x + 1].
+    (A) a 3.
+    (B) a at: 3.
+    (C) a value: 3.
+    (D) a x: 3.
+
+
+
+Question 8 on Free Response on cmps112-2018q1-final.tt with accuracy 0.7457627118644068: 
+   Ocaml.  Define a function zip which takes two lists as arguments
+   and returns a list of tuples containing the corresponding elements.
+   If the lists are of different lengths, ignore excess elements of
+   the longer list.  [2pt]
+   # zip;;
+   - : 'a list -> 'b list -> ('a * 'b) list = <fun>
+   # zip [1;2;3] [4;5;6];;
+   - : (int * int) list = [(1, 4); (2, 5); (3, 6)]
+   # zip [1;2;3;4;5;6;7;8] [3;6;9];;
+   - : (int * int) list = [(1, 3); (2, 6); (3, 9)]
+
+
+
+Question 10 on Free Response on cmps112-2018q1-final.tt with accuracy 0.7358490566037735: 
+    Prolog.  Given the facts listed here, write a relation chow_time
+   with a single list argument, and which will succeed if anything in
+   the list will get eaten.  Hint:  The function member(X,Y) checks to
+   see if the item X is a member of the list Y.  Write the relation
+   chow_time, which has a list argument and succeeds [2pt]
+   eats(fox,chicken).
+   eats(chicken,grain).
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2018q1-final.tt with accuracy 1.0: 
+    # (<) 2;;
+    (A) - : 'a -> bool = <fun>
+    (B) - : bool -> 'a = <fun>
+    (C) - : bool -> int = <fun>
+    (D) - : int -> bool = <fun>
+
+
+
+Question 7 on Free Response on cmps112-2018q2-final.tt with accuracy 0.7130434782608696: 
+   Prolog.
+
+    (a) Write a set of facts called arrow which describe this graph,
+        where arrow(a,b) means that a->b.  [2pt]
+
+.PS 1i
+arrowht = circlerad
+arrowwid = circlerad/2
+A: circle "a"
+B: circle "b" at A+(5*circlerad,0)
+arrow from A to B chop
+C: circle "c" at A+(0,-5*circlerad)
+arrow from B to C chop
+arrow from A to C chop
+D: circle "d" at B+(5*circlerad,0)
+arrow from B to D chop
+E: circle "e" at D+(0,-5*circlerad)
+arrow from D to E chop
+arrow from E to C chop
+.PE
+
+    (b) Given ispath as defined here, write the relation ispath(A,Vis-
+        ited,B) which succeeds if there is a path from A to B and
+        avoids infinite traversals around a loop.  Use Visited to keep
+        track of the nodes visited.  [2pt]
+        Assume these relations:
+           not(X) :- X,!,fail.
+           not(_).
+           ispath(A,A).
+           ispath(A,B) :- ispath(A,[],B).
+        Results:
+        | ?- ispath(a,e).   yes
+        | ?- ispath(c,e).   no
+        | ?- ispath(a,c).   yes
+        | ?- ispath(d,c).   yes
+
+
+
+Question 5 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.7692307692307693: 
+    Type of [(1,"a");(2,"b");(3,"c")]
+    (A) (int * int * int) list
+        * (string * string * string) list
+    (B) (int * string) list list
+    (C) (int * string) list
+    (D) int list * string list
+
+
+
+Question 6 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.7857142857142857: 
+    What will cause a list with no elements to be passed to the
+    function f?
+    (A) (f '())
+    (B) (f ())
+    (C) (f null)
+    (D) (f null?)
+
+
+
+Question 8 on Multiple Choice part 1 on cmps112-2018q2-final.tt with accuracy 0.9285714285714286: 
+    Ocaml.  Type of (+)
+    (A) int * int * int
+    (B) int * int -> int
+    (C) int -> int * int
+    (D) int -> int -> int
+
+
+
+Question 5 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.7272727272727273: 
+    Given this Smalltalk definition, what returns 4?  a := [:x| x +
+    1].
+    (A) 3 a.
+    (B) a 3.
+    (C) a at: 3.
+    (D) a value: 3.
+
+
+
+Question 9 on Multiple Choice part 2 on cmps112-2018q2-final.tt with accuracy 0.75: 
+    Ocaml.  let f x = x /. 2.;;
+    (A) val f : float -> float = <fun>
+    (B) val f : float -> int = <fun>
+    (C) val f : int -> float = <fun>
+    (D) val f : int -> int = <fun>
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2018q4-final.tt with accuracy 0.8333333333333334: 
+    Which system call is used to find the modification time of a file?
+    (A) ls(1)
+    (B) readlink(2)
+    (C) stat(2)
+    (D) time(2)
+
+
+
+Question 3 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.7777777777777778: 
+    What is the first line of a Perl script?
+    (A) !#/usr/bin/perl
+    (B) #!/bin/bash perl
+    (C) #!/usr/bin/perl
+    (D) #!\usr\bin\perl
+
+
+
+Question 4 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.9230769230769231: 
+    Perl.  Which expression will find the value associated with the
+    key $i$ in the hash $a$?
+    (A) $a($i)
+    (B) $a<$i>
+    (C) $a[$i]
+    (D) $a{$i}
+
+
+
+Question 6 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.8333333333333334: 
+    Perl.  Which of the following is an array?
+    (A) $a
+    (B) %a
+    (C) *a
+    (D) @a
+
+
+
+Question 8 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 0.7222222222222222: 
+    What will redirect both the stdout and stderr of program foo into
+    the file bar?
+    (A) foo 1>&2 >bar
+    (B) foo 2>&1 >bar
+    (C) foo >bar 1>&2
+    (D) foo >bar 2>&1
+
+
+
+Question 11 on Multiple Choice part 2 on cmps112-2018q4-final.tt with accuracy 1.0: 
+    Ocaml.  # (=);;
+    (A) - : 'a * 'a -> bool = <fun>
+    (B) - : 'a -> 'a -> bool = <fun>
+    (C) - : int * int -> bool = <fun>
+    (D) - : int -> int -> bool = <fun>
+
+
+
+Question 1 on Free Response on cmps112-2019q1-final.tt with accuracy 0.896551724137931: 
+   Ocaml.  Define the following functions.
+
+    (a) [2pt]
+        # map;;
+        - : ('a -> 'b) -> 'a list -> 'b list = <fun>
+
+    (b) [2pt]
+        # filter;;
+        - : ('a -> bool) -> 'a list -> 'a list = <fun>
+
+    (c) [2pt]
+        # fold_left;;
+        - : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a = <fun>
+
+
+
+Question 2 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.9090909090909091: 
+    Perl.  What will print foo?
+    (A) print "foo" if 0;
+    (B) print "foo" if FALSE;
+    (C) print "foo" if "";
+    (D) print "foo" if undef;
+
+
+
+Question 10 on Multiple Choice part 1 on cmps112-2019q1-final.tt with accuracy 0.7222222222222222: 
+    Bash.  What will run the program foo, redirect both its stdout and
+    stderr to the file bar?
+    (A) foo <bar 1>&2
+    (B) foo <bar 2>&1
+    (C) foo >bar 1>&2
+    (D) foo >bar 2>&1
+
+
+
+Question 5 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 1.0: 
+    Ocaml.  List.map
+    (A) ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a
+    (B) ('a -> 'b -> 'b) -> 'a list -> 'b -> 'b
+    (C) ('a -> 'b) -> 'a list -> 'b list
+    (D) ('a -> bool) -> 'a list -> 'a list
+
+
+
+Question 8 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.7272727272727273: 
+    Perl.  What is used to extract an element using $key from a hash
+    %hash?
+    (A) %hash[$key]
+    (B) %hash{$key}
+    (C) $hash[$key]
+    (D) $hash{$key}
+
+
+
+Question 10 on Multiple Choice part 2 on cmps112-2019q1-final.tt with accuracy 0.75: 
+    Ocaml.  What is an int list?
+    (A) (1,2,3,4)
+    (B) (1;2;3;4)
+    (C) [1,2,3,4]
+    (D) [1;2;3;4]
+
+
+
